@@ -1,25 +1,62 @@
-const express = require('express')
-const logger = require('morgan')
-const cors = require('cors')
+const { type } = require("os");
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-const contactsRouter = require('./routes/api/contacts')
+const checkArrayType = (arr) => {
+  const numCount = arr.reduce(
+    (acc, current) => (current.match(/^\d+$/) ? acc + 1 : acc),
+    0
+  );
+  if (numCount === 0 || numCount === arr.length) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-const app = express()
+const game = () => {
+  rl.question("Enter an array of values: ", (value) => {
+    const values = value.split(" ");
+    if (checkArrayType(values)) {
+      rl.question(
+        "Enter the number of the operation you want to perform with the array of elements: ",
+        (operation) => {
+          switch (operation) {
+            case "a":
+              console.log(values.sort((a, b) => a.localeCompare(b)));
+              return game();
+            case "b":
+              console.log(values.sort((a, b) => a - b));
+              return game();
+            case "c":
+              console.log(values.sort((a, b) => b - a));
+              return game();
+            case "d":
+              console.log(values.sort((a, b) => b.length - a.length));
+              return game();
+            case "f":
+              console.log(Array.from(new Set(values)));
+              return game();
+            case "e":
+              console.log(Array.from(new Set(values)));
+              return game();
+            case "exit":
+              console.log("Bye bye !");
+              return rl.close();
+            default:
+              "Command undefined";
+              return game();
+          }
+        }
+      );
+    } else {
+      console.log("Elements in Array must be same type !");
+      game();
+    }
+  });
+};
 
-const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short'
-
-app.use(logger(formatsLogger))
-app.use(cors())
-app.use(express.json())
-
-app.use('/api/contacts', contactsRouter)
-
-app.use((req, res) => {
-  res.status(404).json({ message: 'Not found' })
-})
-
-app.use((err, req, res, next) => {
-  res.status(500).json({ message: err.message })
-})
-
-module.exports = app
+game();
