@@ -69,8 +69,9 @@ const searchForUserStep = () => {
   inquirer.prompt(searchForUserOptions).then(async ({ userName }) => {
     const users = await listContacts();
     const userFindRes =
-      users.find((item) => item.user === userName) ??
-      "User wasn`t found, try again";
+      users.find(
+        (item) => item.user.toLowerCase() === userName.toLowerCase()
+      ) ?? "User wasn`t found, try again";
     return console.log(userFindRes);
   });
 };
