@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import { listContacts, addContact } from "./dbOperations.js";
 
 const startQuestions = [
   {
@@ -12,7 +13,7 @@ const startQuestions = [
 const questions = [
   {
     type: "rawlist",
-    name: "gender",
+    name: "userGender",
     message: "Enter thr user`s gender ",
     choices: ["male", "female"],
   },
@@ -30,12 +31,58 @@ const questions = [
   },
 ];
 
-inquirer.prompt(startQuestions).then((answers) => {
-  if (answers.userName !== "Enter") {
-    inquirer.prompt(questions).then((answers) => {
-      console.log(JSON.stringify(answers, null, " "));
-    });
-  } else {
-    console.log("Start loocking for db");
-  }
-});
+const displayDbQuestions = [
+  {
+    type: "confirm",
+    name: "confirmDisplayDb",
+    message: "Do u want to display DB Data ? ",
+    default: "Yes",
+  },
+];
+
+const searchForUserOptions = [
+  {
+    type: "input",
+    name: "userName",
+    message: "Enter thr user`s name u wanna find ?",
+  },
+];
+
+const addUserStep = (name) => {
+  inquirer.prompt(questions).then(async ({ userGender, userAge }) => {
+    await addContact(name, userGender, userAge);
+    startPrompt();
+  });
+};
+
+const displayDbStep = () => {
+  inquirer.prompt(displayDbQuestions).then(async ({ confirmDisplayDb }) => {
+    if (confirmDisplayDb) {
+      console.log(await listContacts());
+      searchForUserStep();
+    }
+    return;
+  });
+};
+
+const searchForUserStep = () => {
+  inquirer.prompt(searchForUserOptions).then(async ({ userName }) => {
+    const users = await listContacts();
+    const userFindRes =
+      users.find((item) => item.user === userName) ??
+      "User wasn`t found, try again";
+    return console.log(userFindRes);
+  });
+};
+
+const startPrompt = () => {
+  inquirer.prompt(startQuestions).then(({ userName }) => {
+    if (userName.toLowerCase() !== "enter") {
+      addUserStep(userName);
+    } else {
+      displayDbStep();
+    }
+  });
+};
+
+startPrompt();
