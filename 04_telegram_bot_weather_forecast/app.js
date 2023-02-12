@@ -2,6 +2,10 @@ import TelegramApi from "node-telegram-bot-api";
 import { startOption, weatherOptions } from "./options.js";
 import { getWether } from "./weaterOperations.js";
 
+// const getIconUrl = (icon) => {
+//   return `http://openweathermap.org/img/wn/${icon}@2x.png`;
+// };
+
 const TOKEN = "6288012322:AAEjIbHMw1by26N8iF-56DIP07JfU0xmIR8";
 const bot = new TelegramApi(TOKEN, { polling: true });
 
@@ -26,7 +30,25 @@ const start = async () => {
         text === "at intervals of 6 hours"
       ) {
         const weather = await getWether();
-        return console.log("1234532131313213131231313131231231221");
+        bot.sendMessage(
+          chatId,
+          `Wether: ${weather.main}\nDescription: ${weather.description}`
+        );
+        const nextFetch =
+          text === "at intervals of 3 hours"
+            ? Date.now() + 10800000
+            : Date.now() + 21600000;
+
+        const intervalId = setInterval(async () => {
+          if (Date.now() === nextFetch) {
+            const weather = await getWether();
+            bot.sendMessage(
+              chatId,
+              `Wether: ${weather.main}\nDescription: ${weather.description}`
+            );
+            return clearInterval(intervalId);
+          }
+        }, 2147483647);
       }
 
       return bot.sendMessage(chatId, "Unknown command, try again");

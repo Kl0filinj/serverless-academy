@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../04_telegram_bot_exchange_rates/node_modules/axios";
 // axios.defaults.baseURL = "https://api.example.com";
 // const WETHER_API = "1d26acfa1f77bb2cde7a27ee95cb7567";
 
