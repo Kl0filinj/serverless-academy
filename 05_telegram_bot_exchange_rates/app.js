@@ -1,10 +1,18 @@
 import TelegramApi from "node-telegram-bot-api";
 import { startOption } from "./options.js";
-import { getCurrency } from "./currencyOperations.js";
+import { getCurrency, myCache } from "./currencyOperations.js";
 
 const TOKEN = "5881842751:AAEPX7Pxd70lmigh6LoPIqcikRoI5v530zM";
 const bot = new TelegramApi(TOKEN, { polling: true });
 
+const currencyCodes = {
+  USD: 840,
+  EUR: 978,
+};
+
+const getSelectedCurrecy = (selected, arr) => {
+  return arr.find((item) => item.currencyCodeA === currencyCodes[selected]);
+};
 const start = async () => {
   bot.setMyCommands([
     { command: "/start", description: "Check current exchange rates" },
@@ -14,30 +22,27 @@ const start = async () => {
     const text = msg.text;
     const chatId = msg.chat.id;
 
-    try {
-      if (text === "/start") {
-        return bot.sendMessage(chatId, "Choose the currency", startOption);
-      }
-      if (text === "USD" || text === "EUR") {
-        const result = await getCurrency(text);
-        console.log(result);
+    if (text === "/start") {
+      return bot.sendMessage(chatId, "Choose the currency", startOption);
+    }
+    if (text === "USD" || text === "EUR") {
+      try {
+        const result = await getCurrency();
+        const { rateBuy, rateSell } = getSelectedCurrecy(text, result);
         return bot.sendMessage(
           chatId,
-          `Here is rates for ${text}: \nBuy: ${result.rateBuy}\nSell: ${result.rateSell}`
+          `Here is rates for ${text}: \nBuy: ${rateBuy}\nSell: ${rateSell}`
+        );
+      } catch (error) {
+        const cachedResult = myCache.get("currency");
+        const { rateBuy, rateSell } = getSelectedCurrecy(text, cachedResult);
+        return bot.sendMessage(
+          chatId,
+          `Here is rates for ${text}: \nBuy: ${rateBuy}\nSell: ${rateSell}`
         );
       }
-      // if (
-      //   text === "at intervals of 3 hours" ||
-      //   text === "at intervals of 6 hours"
-      // ) {
-      //   const weather = await getWether();
-      //   return console.log("1234532131313213131231313131231231221");
-      // }
-
-      return bot.sendMessage(chatId, "Unknown command, try again");
-    } catch (e) {
-      return bot.sendMessage(chatId, "Something went wrong");
     }
+    return bot.sendMessage(chatId, "Unknown command, try again");
   });
 };
 

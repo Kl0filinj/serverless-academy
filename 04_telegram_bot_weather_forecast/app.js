@@ -39,14 +39,13 @@ const start = async () => {
             ? Date.now() + 10800000
             : Date.now() + 21600000;
 
-        const intervalId = setInterval(async () => {
+        setInterval(async () => {
           if (Date.now() === nextFetch) {
             const weather = await getWether();
             bot.sendMessage(
               chatId,
               `Wether: ${weather.main}\nDescription: ${weather.description}`
             );
-            return clearInterval(intervalId);
           }
         }, 2147483647);
       }

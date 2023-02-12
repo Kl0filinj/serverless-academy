@@ -1,25 +1,24 @@
-import axios from "../04_telegram_bot_exchange_rates/node_modules/axios";
+import axios from "axios";
 // axios.defaults.baseURL = "https://api.example.com";
 // const WETHER_API = "1d26acfa1f77bb2cde7a27ee95cb7567";
+import NodeCache from "node-cache";
+export const myCache = new NodeCache();
 
-const currencyCodes = {
-  USD: 840,
-  EUR: 978,
-};
+const currencyCodes = [840, 978];
 
-export async function getCurrency(curName) {
+export async function getCurrency() {
   try {
     const currencyRates = await axios.get(
       `https://api.monobank.ua/bank/currency`
     );
-    // console.log(currencyRates.data);
-    const filteredRates = currencyRates.data.find(
-      (item) => item.currencyCodeA === currencyCodes[curName]
-    );
-    console.log(filteredRates);
+    const filteredRates = currencyRates.data
+      .filter((item) => currencyCodes.includes(item.currencyCodeA))
+      .slice(0, 2);
+    if (filteredRates !== undefined) {
+      myCache.set("currency", filteredRates);
+    }
     return filteredRates;
-    // return JSON.parse(users);
   } catch (error) {
-    console.log(error);
+    throw error;
   }
 }
