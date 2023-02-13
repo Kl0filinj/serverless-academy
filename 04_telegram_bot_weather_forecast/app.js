@@ -29,25 +29,10 @@ const start = async () => {
         text === "at intervals of 3 hours" ||
         text === "at intervals of 6 hours"
       ) {
-        const weather = await getWether();
-        bot.sendMessage(
-          chatId,
-          `Wether: ${weather.main}\nDescription: ${weather.description}`
-        );
-        const nextFetch =
-          text === "at intervals of 3 hours"
-            ? Date.now() + 10800000
-            : Date.now() + 21600000;
-
-        setInterval(async () => {
-          if (Date.now() === nextFetch) {
-            const weather = await getWether();
-            bot.sendMessage(
-              chatId,
-              `Wether: ${weather.main}\nDescription: ${weather.description}`
-            );
-          }
-        }, 2147483647);
+        const weather = text.includes("3")
+          ? await getWether()
+          : await getWether(6);
+        return bot.sendMessage(chatId, weather);
       }
 
       return bot.sendMessage(chatId, "Unknown command, try again");
