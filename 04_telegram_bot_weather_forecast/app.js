@@ -40,19 +40,6 @@ const start = async () => {
       return bot.sendMessage(chatId, "Something went wrong");
     }
   });
-
-  // bot.on("callback_query", async (msg) => {
-  //   const data = msg.data;
-  //   const chatId = msg.message.chat.id;
-  //   console.log(123);
-
-  //   if (data === "/choice") {
-  //     return bot.sendMessage(chatId, "Choose the period", weatherOptions);
-  //   }
-  //   if (data === "3" || data === "6") {
-  //     return console.log("1234532131313213131231313131231231221");
-  //   }
-  // });
 };
 
 start();
