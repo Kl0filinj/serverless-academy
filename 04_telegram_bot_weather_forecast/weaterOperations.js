@@ -1,5 +1,4 @@
 import axios from "axios";
-// axios.defaults.baseURL = "https://api.example.com";
 const WETHER_TOKEN = "1d26acfa1f77bb2cde7a27ee95cb7567";
 
 const toMessage = (arr) => {
@@ -25,7 +24,6 @@ export async function getWether(timeStep = 3) {
       return toMessage(filteredResult);
     }
     return toMessage(result);
-    // console.log(result);
   } catch (error) {
     console.log(error);
   }
