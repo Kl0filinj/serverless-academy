@@ -13,33 +13,39 @@ async function getTimeRecord(fnc) {
 
 async function uniqueValues() {
   const filenames = fs.readdirSync(dataPath);
-  const uniqueUsers = [];
-  for (let i = 0; i < filenames.length; i += 1) {
-    const users = await readFile(dataPath + `/${filenames[i]}`, "utf8");
-    uniqueUsers.push(...users.split("\n"));
-  }
+
+  const uniqueUsers = await filenames.reduce(async (acc, item) => {
+    let accum = await acc;
+    const users = await readFile(dataPath + `/${item}`, "utf8");
+    accum.push(...users.split("\n"));
+    return accum;
+  }, Promise.resolve([]));
+
   const set = new Set(uniqueUsers);
   console.log(set.size);
 }
 
 async function existInAllFiles() {
   const filenames = fs.readdirSync(dataPath);
-  const uniqueUsers = [];
-  for (let i = 0; i < filenames.length; i += 1) {
-    const users = await readFile(dataPath + `/${filenames[i]}`, "utf8");
-    uniqueUsers.push(...users.split("\n"));
-  }
-  console.log(uniqueUsers.length);
+  const userNamesLength = await filenames.reduce(async (acc, item) => {
+    let accum = await acc;
+    const users = await readFile(dataPath + `/${item}`, "utf8");
+    return (accum += users.split("\n").length);
+  }, Promise.resolve(0));
+  console.log(userNamesLength);
 }
 
 async function existInAtleastTen() {
   const filenames = fs.readdirSync(dataPath);
-  const uniqueUsers = [];
-  for (let i = 0; i < 10; i += 1) {
-    const users = await readFile(dataPath + `/${filenames[i]}`, "utf8");
-    uniqueUsers.push(...users.split("\n"));
-  }
-  console.log(uniqueUsers.length);
+  const userNamesLength = await filenames.reduce(async (acc, item, index) => {
+    if (index < 10) {
+      let accum = await acc;
+      const users = await readFile(dataPath + `/${item}`, "utf8");
+      return (accum += users.split("\n").length);
+    }
+    return acc;
+  }, Promise.resolve(0));
+  console.log(userNamesLength);
 }
 
 getTimeRecord(existInAtleastTen);
