@@ -2,10 +2,6 @@ import TelegramApi from "node-telegram-bot-api";
 import { startOption, weatherOptions } from "./options.js";
 import { getWether } from "./weaterOperations.js";
 
-// const getIconUrl = (icon) => {
-//   return `http://openweathermap.org/img/wn/${icon}@2x.png`;
-// };
-
 const TOKEN = "6288012322:AAEjIbHMw1by26N8iF-56DIP07JfU0xmIR8";
 const bot = new TelegramApi(TOKEN, { polling: true });
 
