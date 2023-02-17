@@ -3,36 +3,33 @@ const fs = require("fs");
 
 const dataPath = __dirname + "/data";
 
-// high order fnc to get time record
 async function optimizeVacationList() {
   const vacationList = JSON.parse(
     await readFile(dataPath + "/vacations.json", "utf8")
   );
+
   const userNmaes = Array.from(
     new Set(vacationList.map((item) => item.user.name))
   );
-  console.log(userNmaes);
-  const newVacationsList = [];
-  for (let i = 0; i < userNmaes.length; i += 1) {
+  const newVacationsList = userNmaes.map((name) => {
     const findAllUsersWithName = vacationList.filter(
-      (item) => item.user.name === userNmaes[i]
+      (item) => item.user.name === name
     );
     const vacations = findAllUsersWithName.map(({ startDate, endDate }) => {
       return { startDate, endDate };
     });
     const { _id: userId, name: userName } = findAllUsersWithName[0].user;
-    newVacationsList.push({
+    return {
       userId,
       userName,
       vacations,
-    });
-  }
+    };
+  });
   await writeFile(
     dataPath + "/newVacations.json",
     JSON.stringify(newVacationsList),
     "utf8"
   );
-  console.log(newVacationsList);
 }
 
 optimizeVacationList();
