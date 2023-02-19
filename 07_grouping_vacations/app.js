@@ -33,19 +33,3 @@ async function optimizeVacationList() {
 }
 
 optimizeVacationList();
-// [
-//   {
-//     userId: "60b7c1f04df06a0011ef0e76",
-//     userName: "Laurence Knox",
-//     vacations: [
-//       {
-//         startDate: "2021-11-19",
-//         endDate: "2021-11-23",
-//       },
-//       {
-//         startDate: "2021-12-09",
-//         endDate: "2021-12-10",
-//       },
-//     ],
-//   },
-// ];
