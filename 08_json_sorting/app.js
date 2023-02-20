@@ -30,10 +30,10 @@ async function requestAttempt(endpoint) {
       const user = await response.json();
       return user;
     } catch (error) {
-      if (i < 2) {
-        continue;
+      if (i === 2) {
+        return { error };
       }
-      return { error };
+      continue;
     }
   }
 }

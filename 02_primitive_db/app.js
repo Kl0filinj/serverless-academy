@@ -1,55 +1,14 @@
 import inquirer from "inquirer";
 import { listContacts, addContact } from "./dbOperations.js";
-
-const startQuestions = [
-  {
-    type: "input",
-    name: "userName",
-    message: "Enter thr user`s name. To cancel press ENTER ",
-    default: "Enter",
-  },
-];
-
-const questions = [
-  {
-    type: "rawlist",
-    name: "userGender",
-    message: "Enter thr user`s gender ",
-    choices: ["male", "female"],
-  },
-  {
-    type: "input",
-    name: "userAge",
-    message: "Enter thr user`s age ",
-    validate: function (value) {
-      const pass = value.match(/^\d+$/);
-      if (!pass) {
-        return "Enter a number";
-      }
-      return true;
-    },
-  },
-];
-
-const displayDbQuestions = [
-  {
-    type: "confirm",
-    name: "confirmDisplayDb",
-    message: "Do u want to display DB Data ? ",
-    default: "Yes",
-  },
-];
-
-const searchForUserOptions = [
-  {
-    type: "input",
-    name: "userName",
-    message: "Enter thr user`s name u wanna find ?",
-  },
-];
+import {
+  displayDbQuestions,
+  searchForUserQuestions,
+  startQuestions,
+  userInfoQuestions,
+} from "./questions.js";
 
 const addUserStep = (name) => {
-  inquirer.prompt(questions).then(async ({ userGender, userAge }) => {
+  inquirer.prompt(userInfoQuestions).then(async ({ userGender, userAge }) => {
     await addContact(name, userGender, userAge);
     startPrompt();
   });
@@ -66,7 +25,7 @@ const displayDbStep = () => {
 };
 
 const searchForUserStep = () => {
-  inquirer.prompt(searchForUserOptions).then(async ({ userName }) => {
+  inquirer.prompt(searchForUserQuestions).then(async ({ userName }) => {
     const users = await listContacts();
     const userFindRes =
       users.find(
