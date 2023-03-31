@@ -5,7 +5,10 @@ const {
   generateAccessToken,
   generateRefreshToken,
 } = require("../utils/tokenOperations");
-const { incryptPassword } = require("../utils/validatePassword");
+const {
+  incryptPassword,
+  isValidPassword,
+} = require("../utils/validatePassword");
 
 const userAttributes = [
   "id",
@@ -25,18 +28,18 @@ const registration = async (req, res) => {
     text: "SELECT * FROM users WHERE email = $1",
     values: [reqEmail],
   };
-  const result = await client.query(checkQuery);
+  const user = await client.query(checkQuery).rows[0];
 
-  console.log("EMAIL CHECK", result);
+  console.log("EMAIL CHECK", user);
   // "Already in use check"
-  if (result.rows[0]) {
+  if (user) {
     throw RequestError(409, "This email is already in use");
   }
   const userId = uuidv4();
 
   const accessToken = generateAccessToken(userId);
   const refreshToken = generateRefreshToken(userId);
-  const incryptedPassword = incryptPassword(password);
+  const incryptedPassword = await incryptPassword(password);
 
   const registrationResponse = await client.query(
     `
@@ -46,7 +49,7 @@ const registration = async (req, res) => {
     [userId, reqEmail, incryptedPassword, refreshToken]
   );
 
-  console.log("REG RESP", registrationResponse);
+  console.log("REG RESP - ", registrationResponse);
 
   return res.status(201).json({
     success: true,
@@ -59,7 +62,35 @@ const registration = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  return res.status(201).json({ message: "OK" });
+  const { email: reqEmail, password } = req.body;
+
+  const checkQuery = {
+    text: "SELECT * FROM users WHERE email = $1",
+    values: [reqEmail],
+  };
+  const user = (await client.query(checkQuery)).rows[0];
+
+  console.log("USER RESP FROM LOGIN - ", user);
+
+  if (!user) {
+    throw RequestError(401, "User with this email not found");
+  }
+
+  if (!(await isValidPassword(password, user.password))) {
+    throw RequestError(401, "Wrong password");
+  }
+
+  const accessToken = generateAccessToken(user.id);
+  const refreshToken = generateRefreshToken(user.id);
+
+  return res.status(200).json({
+    success: true,
+    data: {
+      id: user.id,
+      accessToken,
+      refreshToken,
+    },
+  });
 };
 
 module.exports = { registration, login };

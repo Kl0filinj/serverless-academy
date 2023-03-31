@@ -1,13 +1,11 @@
 const express = require("express");
-const { current } = require("../controllers/userController");
+const { getCurrentUser } = require("../controllers/userController");
 const asyncWrapper = require("../middleware/asyncWrapper");
-// const validateBody = require("../middleware/validateBody");
-// const { schema } = require("../utils/validationSchemas");
+const { authMiddleware } = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
 // Current user info
-router.get("/", asyncWrapper(current));
-
+router.get("/", authMiddleware, asyncWrapper(getCurrentUser));
 
 module.exports = router;
