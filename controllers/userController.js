@@ -1,9 +1,24 @@
 // const RequestError = require("../utils/RequestError");
+const client = require("../db");
+const RequestError = require("../utils/RequestError");
+const { successTemplate } = require("../utils/responseTemplate");
 
 const getCurrentUser = async (req, res) => {
-  const { email } = req.body;
+  const userId = req.user;
+  const userQuery = {
+    text: "SELECT * FROM users WHERE id = $1",
+    values: [userId],
+  };
 
-  return res.status(200).json({ message: email });
+  const user = await client.query(userQuery);
+
+  if (!user.rows[0]) {
+    throw RequestError(409, "Server error, user not found");
+  }
+
+  return res
+    .status(200)
+    .json(successTemplate({ id: userId, email: user.rows[0].email }));
 };
 
 module.exports = { getCurrentUser };

@@ -5,7 +5,7 @@ function generateAccessToken(userId) {
     { id: userId },
     process.env.ACCESS_TOKEN_SECRET,
     {
-      expiresIn: process.env.ACCESS_TOKEN_TTL,
+      expiresIn: `${process.env.ACCESS_TOKEN_TTL}`,
     }
   );
   return accessToken;
