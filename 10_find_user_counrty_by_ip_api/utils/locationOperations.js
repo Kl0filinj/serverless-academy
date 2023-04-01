@@ -3,7 +3,9 @@ const ip = require("ip");
 const path = require("node:path");
 const { createReadStream } = require("node:fs");
 
-const ipRecordsPath = path.resolve("source/IP_RECORDS.csv");
+const ipRecordsPath = path.resolve(
+  "10_find_user_counrty_by_ip_api/source/IP_RECORDS.csv"
+);
 
 async function findLocationByIp(userIp) {
   const results = [];
