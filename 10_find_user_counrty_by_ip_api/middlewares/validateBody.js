@@ -1,4 +1,4 @@
-const RequestError = require("./RequestError");
+const RequestError = require("../utils/RequestError");
 
 const validateIpAddress = (req, res, next) => {
   const { ip } = req.body;

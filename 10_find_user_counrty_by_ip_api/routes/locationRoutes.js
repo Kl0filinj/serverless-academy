@@ -2,7 +2,7 @@ const express = require("express");
 
 const asyncWrapper = require("../middlewares/asyncWrapper");
 const { getUserLocation } = require("../controllers/locationController");
-const validateIpAddress = require("../utils/validateBody");
+const validateIpAddress = require("../middlewares/validateBody");
 
 const router = express.Router();
 
