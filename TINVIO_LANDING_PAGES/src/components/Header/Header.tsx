@@ -1,4 +1,6 @@
 import React from "react";
+import logo from "../../assets/shared/tinvio_logo.svg";
+import burgerMenu from "../../assets/shared/burger_menu_btn.svg";
 import { BurgerMenuBtn, HeaderS, Logo } from "./Header.styled";
 
 const Header: React.FC = () => {
@@ -6,11 +8,11 @@ const Header: React.FC = () => {
     <>
       <HeaderS>
         <Logo>
-          <svg width="116px" height="42px" display="inline-block">
-            <use href="../../assets/mobile/header/tinvio_logo.svg" />
-          </svg>
+          <img src={logo} alt="" />
         </Logo>
-        <BurgerMenuBtn>add</BurgerMenuBtn>
+        <BurgerMenuBtn>
+          <img src={burgerMenu} alt="" />
+        </BurgerMenuBtn>
       </HeaderS>
     </>
   );
