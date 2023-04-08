@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../../assets/shared/tinvio_logo.svg";
-import burgerMenu from "../../assets/shared/burger_menu_btn.svg";
+import logo from "@/assets/shared/tinvio_logo.svg";
+import burgerMenu from "@/assets/shared/burger_menu_btn.svg";
 import { BurgerMenuBtn, HeaderContainer, HeaderS } from "./Header.styled";
 import { ContentContainer } from "../shared/styles/shearedStyles";
 

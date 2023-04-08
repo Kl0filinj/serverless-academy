@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
-import dots from "../../../assets/shared/small_dots_group.svg";
+import dots from "@/assets/shared/dots/small_12_dots_group.svg";
+import { theme } from "@/theme";
 
 export const HeroSection = styled.section`
   position: relative;

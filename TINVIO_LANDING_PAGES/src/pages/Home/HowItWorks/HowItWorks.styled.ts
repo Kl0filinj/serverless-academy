@@ -1,5 +1,5 @@
+import { theme } from "@/theme";
 import styled from "styled-components";
-import { theme } from "../../../theme";
 
 interface HowItWorksStaticCardProps {
   ml?: "auto" | 0 | "0";
@@ -22,7 +22,7 @@ export const HowItWorksSection = styled.section`
   transform-origin: right bottom;
   border-radius: 50px 0px 0px 50px;
   margin: 395px 0px 0px;
-  padding-bottom: 30px;
+  padding-bottom: 140px;
 `;
 
 export const HowItWorksInnerContainer = styled.div`

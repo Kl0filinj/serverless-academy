@@ -1,8 +1,3 @@
-import {
-  AccentButton,
-  HeroTitle,
-  SectionSubtitle,
-} from "../../../components/shared/styles/shearedStyles";
 import React from "react";
 import {
   HeroRedBgRectangle,
@@ -11,6 +6,11 @@ import {
   SmalDots,
   UnderButtonText,
 } from "./HeroHome.styled";
+import {
+  AccentButton,
+  HeroTitle,
+  SectionSubtitle,
+} from "@/components/shared/styles/shearedStyles";
 
 const Hero: React.FC = () => {
   return (
