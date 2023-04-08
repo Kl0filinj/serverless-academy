@@ -46,3 +46,12 @@ export const AccentButton = styled.button`
 
   text-align: center;
 `;
+
+export const AccentWhiteButton = styled(AccentButton)`
+  background-color: #ffffff;
+  color: ${theme.colors.primary};
+`;
+
+export const ContentContainer = styled.div`
+  max-width: ${theme.breakPoints.xs};
+`;

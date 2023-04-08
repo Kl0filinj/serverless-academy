@@ -6,10 +6,9 @@ export const HeroSection = styled.section`
   position: relative;
   /* overflow: hidden; */
   text-align: center;
-  margin-top: 78px;
+  margin-top: 140px;
   max-width: ${theme.breakPoints.xs};
   padding: 24px 21px;
-  margin: 0 auto;
 `;
 
 export const HeroRedRectangle = styled.div`
