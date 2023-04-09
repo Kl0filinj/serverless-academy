@@ -1,14 +1,20 @@
 import styled from "styled-components";
-import dots from "@/assets/shared/dots/small_12_dots_group.svg";
 import { theme } from "@/theme";
+import {
+  HeroTitle,
+  SvgContainer,
+} from "@/components/shared/styles/shearedStyles";
 
 export const HeroSection = styled.section`
   position: relative;
-  /* overflow: hidden; */
   text-align: center;
   margin-top: 140px;
   max-width: ${theme.breakPoints.xs};
   padding: 24px 21px;
+`;
+
+export const HeroHomeTitle = styled(HeroTitle)`
+  position: relative;
 `;
 
 export const HeroRedRectangle = styled.div`
@@ -37,16 +43,6 @@ export const HeroRedBgRectangle = styled.div`
   z-index: -1;
 `;
 
-export const SmalDots = styled.div`
-  position: absolute;
-  right: -76px;
-  top: 113px;
-  width: 149px;
-  height: 123px;
-  transform: rotate(-45deg);
-  background-image: url(${dots});
-`;
-
 export const UnderButtonText = styled.span`
   display: flex;
   justify-content: center;
@@ -58,3 +54,5 @@ export const UnderButtonText = styled.span`
 
   color: ${theme.colors.secondary};
 `;
+
+export const HeroImage = styled(SvgContainer)``;

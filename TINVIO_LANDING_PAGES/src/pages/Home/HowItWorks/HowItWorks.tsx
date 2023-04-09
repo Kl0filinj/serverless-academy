@@ -7,13 +7,13 @@ import {
   HowItWorksSection,
   HowItWorksSeparator,
   HowItWorksStaticCard,
-  HowItWorksSvgContainer,
   PlayIcon,
 } from "./HowItWorks.styled";
 import {
   AccentWhiteButton,
   SectionSubtitle,
   SectionTitle,
+  SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 import playIcon from "@/assets/shared/play_icon.svg";
 import medDotsGroupIcon from "@/assets/shared/dots/med_14_dots_group.svg";
@@ -109,12 +109,12 @@ const HowItWorks: React.FC = () => {
   return (
     <HowItWorksSection>
       <HowItWorksInnerContainer>
-        <HowItWorksSvgContainer styles={medDotsGroupIconStyles}>
+        <SvgContainer styles={medDotsGroupIconStyles}>
           <img src={medDotsGroupIcon} alt="Dots Icon" />
-        </HowItWorksSvgContainer>
-        <HowItWorksSvgContainer styles={bigDotsGroupIconStyles}>
+        </SvgContainer>
+        <SvgContainer styles={bigDotsGroupIconStyles}>
           <img src={bigDotsGroupIcon} alt="Dots Icon" />
-        </HowItWorksSvgContainer>
+        </SvgContainer>
         <HowItWorksContentContainer>
           <div>
             <SectionTitle>Check out how it works </SectionTitle>
@@ -139,19 +139,19 @@ const HowItWorks: React.FC = () => {
                   Connect to anyone in your supply chain and exchange messages
                 </HowItWorksCardSubtitle>
               </div>
-              <HowItWorksSvgContainer styles={chatCardIconStyles}>
+              <SvgContainer styles={chatCardIconStyles}>
                 <img src={chatCardIcon} alt="Chat Icon" />
-              </HowItWorksSvgContainer>
+              </SvgContainer>
               <div>
-                <HowItWorksSvgContainer styles={firstRedArrowIconStyles}>
+                <SvgContainer styles={firstRedArrowIconStyles}>
                   <img src={firstRedArrowCardIcon} alt="Red Arrow Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
 
               <div>
-                <HowItWorksSvgContainer styles={chatsStarsIconStyles}>
+                <SvgContainer styles={chatsStarsIconStyles}>
                   <img src={chatStarsIcon} alt="Stars Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
             </HowItWorksStaticCard>
 
@@ -163,20 +163,20 @@ const HowItWorks: React.FC = () => {
                 </HowItWorksCardSubtitle>
               </div>
               <div>
-                <HowItWorksSvgContainer styles={ordersIconStyles}>
+                <SvgContainer styles={ordersIconStyles}>
                   <img src={ordersCardIcon} alt="Orders Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
               <div>
-                <HowItWorksSvgContainer styles={secondRedArrowIconStyles}>
+                <SvgContainer styles={secondRedArrowIconStyles}>
                   <img src={secondRedArrowCardIcon} alt="Red Arrow Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
 
               <div>
-                <HowItWorksSvgContainer styles={ordesStarsIconStyles}>
+                <SvgContainer styles={ordesStarsIconStyles}>
                   <img src={ordersStarsIcon} alt="Stars Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
             </HowItWorksStaticCard>
 
@@ -188,19 +188,19 @@ const HowItWorks: React.FC = () => {
                 </HowItWorksCardSubtitle>
               </div>
               <div>
-                <HowItWorksSvgContainer styles={paymentsCardIconStyles}>
+                <SvgContainer styles={paymentsCardIconStyles}>
                   <img src={paymentsCardIcon} alt="Payments Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
               <div>
-                <HowItWorksSvgContainer styles={paymentsStarsIconStyles}>
+                <SvgContainer styles={paymentsStarsIconStyles}>
                   <img src={paymentsStarsIcon} alt="Stars Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
               <div>
-                <HowItWorksSvgContainer styles={paymentsSecondStarsIconStyles}>
+                <SvgContainer styles={paymentsSecondStarsIconStyles}>
                   <img src={paymentsSecondStarsIcon} alt="Stars Icon" />
-                </HowItWorksSvgContainer>
+                </SvgContainer>
               </div>
             </HowItWorksStaticCard>
           </HowItWorksSeparator>

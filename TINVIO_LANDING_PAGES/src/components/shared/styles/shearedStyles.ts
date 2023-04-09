@@ -1,6 +1,14 @@
 import { theme } from "@/theme";
 import styled from "styled-components";
 
+interface SvgContainerProps {
+  styles: IstylesObject;
+}
+
+interface IstylesObject {
+  [key: string]: string;
+}
+
 export const HeroTitle = styled.h1`
   font-family: "GilorySemiBold";
   font-weight: ${theme.fontWeight.semi_bold};
@@ -54,4 +62,9 @@ export const AccentWhiteButton = styled(AccentButton)`
 
 export const ContentContainer = styled.div`
   max-width: ${theme.breakPoints.xs};
+`;
+
+export const SvgContainer = styled.div<SvgContainerProps>`
+  position: absolute;
+  ${(p) => p.styles}
 `;

@@ -6,14 +6,6 @@ interface HowItWorksStaticCardProps {
   mb?: string;
 }
 
-interface HowItWorksSvgContainerProps {
-  styles: IstylesObject;
-}
-
-interface IstylesObject {
-  [key: string]: string;
-}
-
 export const HowItWorksSection = styled.section`
   text-align: center;
   background: rgb(247, 247, 247);
@@ -82,7 +74,7 @@ export const HowItWorksCardSubtitle = styled.p`
   color: ${theme.colors.secondary};
 `;
 
-export const HowItWorksSvgContainer = styled.div<HowItWorksSvgContainerProps>`
-  position: absolute;
-  ${(p) => p.styles}
-`;
+// export const HowItWorksSvgContainer = styled.div<HowItWorksSvgContainerProps>`
+//   position: absolute;
+//   ${(p) => p.styles}
+// `;
