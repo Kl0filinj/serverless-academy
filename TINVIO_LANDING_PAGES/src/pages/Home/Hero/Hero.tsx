@@ -52,11 +52,10 @@ const phoneHeroImageStyles = {
 };
 
 const pcHeroImageStyles = {
-  transform: "rotate(45deg)",
   height: "311px",
   width: "465px",
-  right: "138px",
-  top: "230px",
+  right: "-193px",
+  top: "372px",
 };
 
 const Hero: React.FC = () => {
@@ -86,6 +85,7 @@ const Hero: React.FC = () => {
         <img
           srcSet={`${pcHeroImage1x} 1x, ${pcHeroImage2x} 2x`}
           src={pcHeroImage1x}
+          width="100%"
           alt="PC preview"
         />
       </SvgContainer>
