@@ -11,6 +11,7 @@ import {
 } from "./HowItWorks.styled";
 import {
   AccentWhiteButton,
+  ContentContainer,
   SectionSubtitle,
   SectionTitle,
   SvgContainer,
@@ -108,104 +109,106 @@ const bigDotsGroupIconStyles = {
 const HowItWorks: React.FC = () => {
   return (
     <HowItWorksSection>
-      <HowItWorksInnerContainer>
-        <SvgContainer styles={medDotsGroupIconStyles}>
-          <img src={medDotsGroupIcon} alt="Dots Icon" />
-        </SvgContainer>
-        <SvgContainer styles={bigDotsGroupIconStyles}>
-          <img src={bigDotsGroupIcon} alt="Dots Icon" />
-        </SvgContainer>
-        <HowItWorksContentContainer>
-          <div>
-            <SectionTitle>Check out how it works </SectionTitle>
-            <SectionSubtitle>
-              It`s easy! Exchange messages, create or confirm orders, send
-              invoices, and collect payments across your supply chain — all
-              within one dashboard.
-            </SectionSubtitle>
-            <AccentWhiteButton>
-              <PlayIcon>
-                <img src={playIcon} alt="Play Icon" />
-              </PlayIcon>
-              Play Video
-            </AccentWhiteButton>
-          </div>
+      <ContentContainer>
+        <HowItWorksInnerContainer>
+          <SvgContainer styles={medDotsGroupIconStyles}>
+            <img src={medDotsGroupIcon} alt="Dots Icon" />
+          </SvgContainer>
+          <SvgContainer styles={bigDotsGroupIconStyles}>
+            <img src={bigDotsGroupIcon} alt="Dots Icon" />
+          </SvgContainer>
+          <HowItWorksContentContainer>
+            <div>
+              <SectionTitle>Check out how it works </SectionTitle>
+              <SectionSubtitle>
+                It`s easy! Exchange messages, create or confirm orders, send
+                invoices, and collect payments across your supply chain — all
+                within one dashboard.
+              </SectionSubtitle>
+              <AccentWhiteButton>
+                <PlayIcon>
+                  <img src={playIcon} alt="Play Icon" />
+                </PlayIcon>
+                Play Video
+              </AccentWhiteButton>
+            </div>
 
-          <HowItWorksSeparator>
-            <HowItWorksStaticCard mb="60">
-              <div>
-                <HowItWorksCardTitle>Chats</HowItWorksCardTitle>
-                <HowItWorksCardSubtitle>
-                  Connect to anyone in your supply chain and exchange messages
-                </HowItWorksCardSubtitle>
-              </div>
-              <SvgContainer styles={chatCardIconStyles}>
-                <img src={chatCardIcon} alt="Chat Icon" />
-              </SvgContainer>
-              <div>
-                <SvgContainer styles={firstRedArrowIconStyles}>
-                  <img src={firstRedArrowCardIcon} alt="Red Arrow Icon" />
+            <HowItWorksSeparator>
+              <HowItWorksStaticCard mb="60">
+                <div>
+                  <HowItWorksCardTitle>Chats</HowItWorksCardTitle>
+                  <HowItWorksCardSubtitle>
+                    Connect to anyone in your supply chain and exchange messages
+                  </HowItWorksCardSubtitle>
+                </div>
+                <SvgContainer styles={chatCardIconStyles}>
+                  <img src={chatCardIcon} alt="Chat Icon" />
                 </SvgContainer>
-              </div>
+                <div>
+                  <SvgContainer styles={firstRedArrowIconStyles}>
+                    <img src={firstRedArrowCardIcon} alt="Red Arrow Icon" />
+                  </SvgContainer>
+                </div>
 
-              <div>
-                <SvgContainer styles={chatsStarsIconStyles}>
-                  <img src={chatStarsIcon} alt="Stars Icon" />
-                </SvgContainer>
-              </div>
-            </HowItWorksStaticCard>
+                <div>
+                  <SvgContainer styles={chatsStarsIconStyles}>
+                    <img src={chatStarsIcon} alt="Stars Icon" />
+                  </SvgContainer>
+                </div>
+              </HowItWorksStaticCard>
 
-            <HowItWorksStaticCard ml="auto" mb="30">
-              <div>
-                <HowItWorksCardTitle>Orders</HowItWorksCardTitle>
-                <HowItWorksCardSubtitle>
-                  Create or confirm purchase orders with tap of a button
-                </HowItWorksCardSubtitle>
-              </div>
-              <div>
-                <SvgContainer styles={ordersIconStyles}>
-                  <img src={ordersCardIcon} alt="Orders Icon" />
-                </SvgContainer>
-              </div>
-              <div>
-                <SvgContainer styles={secondRedArrowIconStyles}>
-                  <img src={secondRedArrowCardIcon} alt="Red Arrow Icon" />
-                </SvgContainer>
-              </div>
+              <HowItWorksStaticCard ml="auto" mb="30">
+                <div>
+                  <HowItWorksCardTitle>Orders</HowItWorksCardTitle>
+                  <HowItWorksCardSubtitle>
+                    Create or confirm purchase orders with tap of a button
+                  </HowItWorksCardSubtitle>
+                </div>
+                <div>
+                  <SvgContainer styles={ordersIconStyles}>
+                    <img src={ordersCardIcon} alt="Orders Icon" />
+                  </SvgContainer>
+                </div>
+                <div>
+                  <SvgContainer styles={secondRedArrowIconStyles}>
+                    <img src={secondRedArrowCardIcon} alt="Red Arrow Icon" />
+                  </SvgContainer>
+                </div>
 
-              <div>
-                <SvgContainer styles={ordesStarsIconStyles}>
-                  <img src={ordersStarsIcon} alt="Stars Icon" />
-                </SvgContainer>
-              </div>
-            </HowItWorksStaticCard>
+                <div>
+                  <SvgContainer styles={ordesStarsIconStyles}>
+                    <img src={ordersStarsIcon} alt="Stars Icon" />
+                  </SvgContainer>
+                </div>
+              </HowItWorksStaticCard>
 
-            <HowItWorksStaticCard>
-              <div>
-                <HowItWorksCardTitle>Payments</HowItWorksCardTitle>
-                <HowItWorksCardSubtitle>
-                  Send invoices and reconcile payments in one dashboard
-                </HowItWorksCardSubtitle>
-              </div>
-              <div>
-                <SvgContainer styles={paymentsCardIconStyles}>
-                  <img src={paymentsCardIcon} alt="Payments Icon" />
-                </SvgContainer>
-              </div>
-              <div>
-                <SvgContainer styles={paymentsStarsIconStyles}>
-                  <img src={paymentsStarsIcon} alt="Stars Icon" />
-                </SvgContainer>
-              </div>
-              <div>
-                <SvgContainer styles={paymentsSecondStarsIconStyles}>
-                  <img src={paymentsSecondStarsIcon} alt="Stars Icon" />
-                </SvgContainer>
-              </div>
-            </HowItWorksStaticCard>
-          </HowItWorksSeparator>
-        </HowItWorksContentContainer>
-      </HowItWorksInnerContainer>
+              <HowItWorksStaticCard>
+                <div>
+                  <HowItWorksCardTitle>Payments</HowItWorksCardTitle>
+                  <HowItWorksCardSubtitle>
+                    Send invoices and reconcile payments in one dashboard
+                  </HowItWorksCardSubtitle>
+                </div>
+                <div>
+                  <SvgContainer styles={paymentsCardIconStyles}>
+                    <img src={paymentsCardIcon} alt="Payments Icon" />
+                  </SvgContainer>
+                </div>
+                <div>
+                  <SvgContainer styles={paymentsStarsIconStyles}>
+                    <img src={paymentsStarsIcon} alt="Stars Icon" />
+                  </SvgContainer>
+                </div>
+                <div>
+                  <SvgContainer styles={paymentsSecondStarsIconStyles}>
+                    <img src={paymentsSecondStarsIcon} alt="Stars Icon" />
+                  </SvgContainer>
+                </div>
+              </HowItWorksStaticCard>
+            </HowItWorksSeparator>
+          </HowItWorksContentContainer>
+        </HowItWorksInnerContainer>
+      </ContentContainer>
     </HowItWorksSection>
   );
 };

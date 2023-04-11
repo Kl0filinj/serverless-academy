@@ -1,4 +1,5 @@
 import { theme } from "@/theme";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 interface SvgContainerProps {
@@ -53,6 +54,26 @@ export const AccentButton = styled.button`
   line-height: 20px;
 
   text-align: center;
+  z-index: 100;
+`;
+
+export const AccentLinkButton = styled(NavLink)`
+  display: inline-block;
+  width: 180px;
+  padding: 14px 0;
+  margin: 32px auto 0;
+  background-color: ${theme.colors.accent};
+  border-radius: 16px;
+  color: #ffffff;
+
+  font-family: "GiloryBold";
+  font-weight: ${theme.fontWeight.bold};
+  font-size: ${theme.fontSizes.medium_mb};
+  line-height: 20px;
+
+  text-align: center;
+  text-decoration: none;
+  z-index: 100;
 `;
 
 export const AccentWhiteButton = styled(AccentButton)`
@@ -62,6 +83,7 @@ export const AccentWhiteButton = styled(AccentButton)`
 
 export const ContentContainer = styled.div`
   max-width: ${theme.breakPoints.xs};
+  margin: 0 auto;
 `;
 
 export const SvgContainer = styled.div<SvgContainerProps>`

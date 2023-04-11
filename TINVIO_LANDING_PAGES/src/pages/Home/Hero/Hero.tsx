@@ -8,6 +8,7 @@ import {
 } from "./HeroHome.styled";
 import {
   AccentButton,
+  ContentContainer,
   SectionSubtitle,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
@@ -57,48 +58,50 @@ const pcHeroImageStyles = {
   right: "-193px",
   top: "372px",
 };
-
+ContentContainer;
 const Hero: React.FC = () => {
   return (
     <HeroSection>
-      <HeroHomeTitle>
-        Collecting payments is easy, right?
-        <SvgContainer styles={heroStarsGroupIconStyles}>
-          <img src={heroStarsIcon} alt="Stars Icon" />
-        </SvgContainer>
-      </HeroHomeTitle>
+      <ContentContainer>
+        <HeroHomeTitle>
+          Collecting payments is easy, right?
+          <SvgContainer styles={heroStarsGroupIconStyles}>
+            <img src={heroStarsIcon} alt="Stars Icon" />
+          </SvgContainer>
+        </HeroHomeTitle>
 
-      <SectionSubtitle>
-        Manage all your supply chain transactions in one dashboard. Get paid
-        faster, reconcile quicker, grow bigger.
-      </SectionSubtitle>
-      <AccentButton>Get Started Now</AccentButton>
-      <UnderButtonText>It's free to try!</UnderButtonText>
-      <SvgContainer styles={phoneHeroImageStyles}>
-        <img
-          srcSet={`${phoneHeroImage1x} 1x, ${phoneHeroImage2x} 2x`}
-          src={phoneHeroImage1x}
-          alt="Phone preview"
-        />
-      </SvgContainer>
-      <SvgContainer styles={pcHeroImageStyles}>
-        <img
-          srcSet={`${pcHeroImage1x} 1x, ${pcHeroImage2x} 2x`}
-          src={pcHeroImage1x}
-          width="100%"
-          alt="PC preview"
-        />
-      </SvgContainer>
-      <HeroRedBgRectangle>
-        <HeroRedRectangle>
-          <SvgContainer styles={smallDotsGroupIconStyles}>
-            <img src={smalldotsIcon} alt="Dots Icon" />
-          </SvgContainer>
-          <SvgContainer styles={bigDotsGroupIconStyles}>
-            <img src={bigdotsIcon} alt="Dots Icon" />
-          </SvgContainer>
-        </HeroRedRectangle>
-      </HeroRedBgRectangle>
+        <SectionSubtitle>
+          Manage all your supply chain transactions in one dashboard. Get paid
+          faster, reconcile quicker, grow bigger.
+        </SectionSubtitle>
+        <AccentButton>Get Started Now</AccentButton>
+        <UnderButtonText>It's free to try!</UnderButtonText>
+        <SvgContainer styles={phoneHeroImageStyles}>
+          <img
+            srcSet={`${phoneHeroImage1x} 1x, ${phoneHeroImage2x} 2x`}
+            src={phoneHeroImage1x}
+            alt="Phone preview"
+          />
+        </SvgContainer>
+        <SvgContainer styles={pcHeroImageStyles}>
+          <img
+            srcSet={`${pcHeroImage1x} 1x, ${pcHeroImage2x} 2x`}
+            src={pcHeroImage1x}
+            width="100%"
+            alt="PC preview"
+          />
+        </SvgContainer>
+        <HeroRedBgRectangle>
+          <HeroRedRectangle>
+            <SvgContainer styles={smallDotsGroupIconStyles}>
+              <img src={smalldotsIcon} alt="Dots Icon" />
+            </SvgContainer>
+            <SvgContainer styles={bigDotsGroupIconStyles}>
+              <img src={bigdotsIcon} alt="Dots Icon" />
+            </SvgContainer>
+          </HeroRedRectangle>
+        </HeroRedBgRectangle>
+      </ContentContainer>
     </HeroSection>
   );
 };

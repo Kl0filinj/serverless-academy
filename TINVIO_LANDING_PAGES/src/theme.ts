@@ -12,6 +12,7 @@ export interface ITheme {
     secondary: string;
     accent_red: string;
     accent_bg_red: string;
+    background_grey: string;
   };
   fontSizes: {
     large_mb: string;
@@ -41,6 +42,7 @@ export const theme: ITheme = {
     secondary: "#5C5C5C",
     accent_red: "#FB242B",
     accent_bg_red: "rgba(251, 36, 43, 0.6)",
+    background_grey: "#f3f4f5",
   },
   fontSizes: {
     large_mb: "28px",
@@ -110,6 +112,12 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
     padding: 24px 21px;
     margin: 0 auto;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
 h1,
