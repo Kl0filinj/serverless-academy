@@ -3,8 +3,6 @@ import {
   HowItWorksCardSubtitle,
   HowItWorksCardTitle,
   HowItWorksContentContainer,
-  HowItWorksInnerContainer,
-  HowItWorksSection,
   HowItWorksSeparator,
   HowItWorksStaticCard,
   PlayIcon,
@@ -14,6 +12,8 @@ import {
   ContentContainer,
   SectionSubtitle,
   SectionTitle,
+  SkewedInnerContainer,
+  SkewedSection,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 import playIcon from "@/assets/shared/howItworksSection/play_icon.svg";
@@ -108,9 +108,9 @@ const bigDotsGroupIconStyles = {
 
 const HowItWorks: React.FC = () => {
   return (
-    <HowItWorksSection>
+    <SkewedSection>
       <ContentContainer>
-        <HowItWorksInnerContainer>
+        <SkewedInnerContainer>
           <SvgContainer styles={medDotsGroupIconStyles}>
             <img src={medDotsGroupIcon} alt="Dots Icon" />
           </SvgContainer>
@@ -207,9 +207,9 @@ const HowItWorks: React.FC = () => {
               </HowItWorksStaticCard>
             </HowItWorksSeparator>
           </HowItWorksContentContainer>
-        </HowItWorksInnerContainer>
+        </SkewedInnerContainer>
       </ContentContainer>
-    </HowItWorksSection>
+    </SkewedSection>
   );
 };
 

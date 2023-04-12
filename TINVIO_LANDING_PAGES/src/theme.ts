@@ -10,9 +10,12 @@ export interface ITheme {
     primary: string;
     accent: string;
     secondary: string;
+    placeholder: string;
+    input: string;
     accent_red: string;
     accent_bg_red: string;
     background_grey: string;
+    white: string;
   };
   fontSizes: {
     large_mb: string;
@@ -40,15 +43,17 @@ export const theme: ITheme = {
     primary: "#212121",
     accent: "#FF474D",
     secondary: "#5C5C5C",
+    placeholder: "#bdbdbd",
+    input: "#f3f4f5",
     accent_red: "#FB242B",
     accent_bg_red: "rgba(251, 36, 43, 0.6)",
     background_grey: "#f3f4f5",
+    white: "#ffffff",
   },
   fontSizes: {
     large_mb: "28px",
     small_mb: "14px",
     medium_mb: "16px",
-    // text_mb: "1.5rem",
   },
   fontWeight: {
     medium: 500,

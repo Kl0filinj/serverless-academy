@@ -25,6 +25,7 @@ export const HowItWorksInnerContainer = styled.div`
   margin: 0px auto;
   position: relative;
 `;
+
 export const HowItWorksContentContainer = styled.div`
   display: flex;
   justify-content: center;

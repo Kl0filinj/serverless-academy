@@ -3,6 +3,7 @@ import React from "react";
 import HowItWorks from "./HowItWorks/HowItWorks";
 import SmarterSuplyChain from "./SmarterSuplyChain/SmarterSuplyChain";
 import FeaturedOn from "./FeaturedOn/FeaturedOn";
+import WhyChoose from "./WhyChoose/WhyChoose";
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
       <HowItWorks />
       <SmarterSuplyChain />
       <FeaturedOn />
+      <WhyChoose />
     </>
   );
 };

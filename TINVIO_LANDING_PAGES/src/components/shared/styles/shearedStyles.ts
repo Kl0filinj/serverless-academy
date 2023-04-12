@@ -90,3 +90,22 @@ export const SvgContainer = styled.div<SvgContainerProps>`
   position: absolute;
   ${(p) => p.styles}
 `;
+
+export const SkewedSection = styled.section`
+  text-align: center;
+  background: rgb(247, 247, 247);
+  z-index: 1;
+  transform: skewY(-8deg);
+  transform-origin: right bottom;
+  border-radius: 50px 0px 0px 50px;
+  margin: 395px 0px 0px;
+  padding-bottom: 140px;
+`;
+
+export const SkewedInnerContainer = styled.div`
+  top: 33px;
+  transform: skewY(8deg);
+  max-width: 100%;
+  margin: 0px auto;
+  position: relative;
+`;
