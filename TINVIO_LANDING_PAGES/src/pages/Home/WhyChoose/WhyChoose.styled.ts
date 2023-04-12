@@ -12,6 +12,7 @@ interface IPaginationDot {
 export const WhyChooseSection = styled(SkewedSection)`
   background-color: rgb(54, 54, 54);
   margin-top: 130px;
+  margin-bottom: 130px;
   padding-top: 82px;
   padding-bottom: 176px;
 `;
