@@ -16,18 +16,19 @@ import {
   SkewedSection,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
-import playIcon from "@/assets/shared/howItworksSection/play_icon.svg";
 import medDotsGroupIcon from "@/assets/shared/dots/med_14_dots_group.svg";
 import bigDotsGroupIcon from "@/assets/shared/dots/big_20_dots_group.svg";
-import chatCardIcon from "@/assets/shared/howItworksSection/chat_card_icon.svg";
-import chatStarsIcon from "@/assets/shared/howItworksSection/chat_stars.svg";
-import ordersCardIcon from "@/assets/shared/howItworksSection/orders_card_icon.svg";
-import ordersStarsIcon from "@/assets/shared/howItworksSection/order_stars.svg";
-import paymentsCardIcon from "@/assets/shared/howItworksSection/payments_card_icon.svg";
-import paymentsStarsIcon from "@/assets/shared/howItworksSection/payment_stars.svg";
-import paymentsSecondStarsIcon from "@/assets/shared/howItworksSection/second_payment_stars.svg";
-import firstRedArrowCardIcon from "@/assets/shared/howItworksSection/first_step_red_arrow.svg";
-import secondRedArrowCardIcon from "@/assets/shared/howItworksSection/second_step_red_arrow.svg";
+
+import playIcon from "@/assets/shared/Home/howItworksSection/play_icon.svg";
+import chatCardIcon from "@/assets/shared/Home/howItworksSection/chat_card_icon.svg";
+import chatStarsIcon from "@/assets/shared/Home/howItworksSection/chat_stars.svg";
+import ordersCardIcon from "@/assets/shared/Home/howItworksSection/orders_card_icon.svg";
+import ordersStarsIcon from "@/assets/shared/Home/howItworksSection/order_stars.svg";
+import paymentsCardIcon from "@/assets/shared/Home/howItworksSection/payments_card_icon.svg";
+import paymentsStarsIcon from "@/assets/shared/Home/howItworksSection/payment_stars.svg";
+import paymentsSecondStarsIcon from "@/assets/shared/Home/howItworksSection/second_payment_stars.svg";
+import firstRedArrowCardIcon from "@/assets/shared/Home/howItworksSection/first_step_red_arrow.svg";
+import secondRedArrowCardIcon from "@/assets/shared/Home/howItworksSection/second_step_red_arrow.svg";
 
 const chatCardIconStyles = {
   transform: "matrix(0.98, -0.18, 0.18, 0.98, 0, 0)",

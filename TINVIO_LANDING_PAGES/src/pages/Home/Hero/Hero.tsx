@@ -13,7 +13,7 @@ import {
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 import smileEmojiIcon from "@/assets/shared/heroSection/smile_emoji.svg";
-import heroStarsIcon from "@/assets/shared/heroSection/hero_stars.svg";
+import heroStarsIcon from "@/assets/shared/Home/heroSection/hero_stars.svg";
 import smalldotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
 import smarterMedDotsIconStyles from "@/assets/shared/dots/big_20_dots_group.svg";
 

@@ -5,7 +5,7 @@ export const SliderCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 0 10px;
+  margin: 0 10px 25px;
   background-color: ${theme.colors.white};
   border-radius: 32px;
   min-height: 550px;

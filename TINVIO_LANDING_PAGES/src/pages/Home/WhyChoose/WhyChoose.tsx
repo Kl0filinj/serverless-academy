@@ -18,10 +18,13 @@ import cardEggsCompanyLogoIcon from "@/assets/shared/Home/whyChooseSection/card_
 
 import inactivePaginationDotIcon from "@/assets/shared/dots/pagination_inactive_dot_icon.svg";
 import activePaginationDotIcon from "@/assets/shared/dots/pagination_active_dot_icon.svg";
+import starsGroupIcon from "@/assets/shared/Home/whyChooseSection/stars_group.svg";
+import bigDotsGroupIcon from "@/assets/shared/dots/big_25_dots_group.svg";
 
 import {
   ContentContainer,
   SkewedInnerContainer,
+  SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 import { WhyChooseSection, WhyChooseSectionTitle } from "./WhyChoose.styled";
 
@@ -93,6 +96,17 @@ const cardsInfo: { [key: string]: ICardInfo } = {
   },
 };
 
+const starsGroupIconStyles = {
+  top: "-317px",
+  left: "50%",
+  transform: "translate(-46%, 0)",
+};
+
+const bigDotsGroupIconStyles = {
+  top: "694px",
+  left: "-73px",
+};
+
 const WhyChoose: React.FC = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
@@ -125,6 +139,13 @@ const WhyChoose: React.FC = () => {
     <WhyChooseSection>
       <ContentContainer>
         <SkewedInnerContainer>
+          <SvgContainer styles={starsGroupIconStyles}>
+            <img src={starsGroupIcon} alt="Stars Icon" />
+          </SvgContainer>
+
+          <SvgContainer styles={bigDotsGroupIconStyles}>
+            <img src={bigDotsGroupIcon} alt="Dots Icon" />
+          </SvgContainer>
           <WhyChooseSectionTitle>Why choose Tinvio?</WhyChooseSectionTitle>
           <Slider {...sliderSettings}>
             {Object.keys(cardsInfo).map((item: Key) => (
