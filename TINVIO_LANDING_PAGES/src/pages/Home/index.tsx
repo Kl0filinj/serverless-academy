@@ -2,6 +2,7 @@ import Hero from "./Hero/Hero";
 import React from "react";
 import HowItWorks from "./HowItWorks/HowItWorks";
 import SmarterSuplyChain from "./SmarterSuplyChain/SmarterSuplyChain";
+import FeaturedOn from "./FeaturedOn/FeaturedOn";
 
 const Home: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const Home: React.FC = () => {
       <Hero />
       <HowItWorks />
       <SmarterSuplyChain />
+      <FeaturedOn />
     </>
   );
 };

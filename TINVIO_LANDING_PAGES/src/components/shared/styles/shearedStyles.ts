@@ -24,8 +24,8 @@ export const SectionTitle = styled.h2`
   font-size: ${theme.fontSizes.large_mb};
   line-height: 33px;
 
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 
   color: ${theme.colors.primary};
 `;

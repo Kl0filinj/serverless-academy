@@ -15,7 +15,7 @@ import {
 import smileEmojiIcon from "@/assets/shared/heroSection/smile_emoji.svg";
 import heroStarsIcon from "@/assets/shared/heroSection/hero_stars.svg";
 import smalldotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
-import bigdotsIcon from "@/assets/shared/dots/big_20_dots_group.svg";
+import smarterMedDotsIconStyles from "@/assets/shared/dots/big_20_dots_group.svg";
 
 import phoneHeroImage1x from "@/assets/mobile/hero/hero_phone_x1.png";
 import phoneHeroImage2x from "@/assets/mobile/hero/hero_phone_x2.png";
@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
               <img src={smalldotsIcon} alt="Dots Icon" />
             </SvgContainer>
             <SvgContainer styles={bigDotsGroupIconStyles}>
-              <img src={bigdotsIcon} alt="Dots Icon" />
+              <img src={smarterMedDotsIconStyles} alt="Dots Icon" />
             </SvgContainer>
           </HeroRedRectangle>
         </HeroRedBgRectangle>

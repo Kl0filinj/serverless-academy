@@ -8,7 +8,7 @@ interface ISmarterOptionButton {
 
 export const SmarterSection = styled.section`
   padding-top: 140px;
-  margin-bottom: 70px;
+  margin-bottom: 270px;
 `;
 
 export const SmarterOptionsGroup = styled.ul`
