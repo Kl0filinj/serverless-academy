@@ -5,6 +5,7 @@ import SmarterSuplyChain from "./SmarterSuplyChain/SmarterSuplyChain";
 import FeaturedOn from "./FeaturedOn/FeaturedOn";
 import WhyChoose from "./WhyChoose/WhyChoose";
 import RectangleLogos from "./RectangleLogos/RectangleLogos";
+import FeedbackForm from "./FeedbackForm/FeedbackForm";
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <FeaturedOn />
       <WhyChoose />
       <RectangleLogos />
+      <FeedbackForm />
     </>
   );
 };

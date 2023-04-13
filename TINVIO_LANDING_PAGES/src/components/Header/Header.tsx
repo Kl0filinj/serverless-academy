@@ -6,20 +6,18 @@ import { ContentContainer } from "../shared/styles/shearedStyles";
 
 const Header: React.FC = () => {
   return (
-    <>
-      <HeaderS>
-        <ContentContainer>
-          <HeaderContainer>
-            <div>
-              <img src={logo} alt="" />
-            </div>
-            <BurgerMenuBtn>
-              <img src={burgerMenu} alt="" />
-            </BurgerMenuBtn>
-          </HeaderContainer>
-        </ContentContainer>
-      </HeaderS>
-    </>
+    <HeaderS>
+      <ContentContainer>
+        <HeaderContainer>
+          <div>
+            <img width="114" height="38" src={logo} alt="" />
+          </div>
+          <BurgerMenuBtn>
+            <img src={burgerMenu} alt="" />
+          </BurgerMenuBtn>
+        </HeaderContainer>
+      </ContentContainer>
+    </HeaderS>
   );
 };
 

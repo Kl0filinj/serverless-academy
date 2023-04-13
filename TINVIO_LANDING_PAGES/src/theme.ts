@@ -41,11 +41,11 @@ export interface ITheme {
 export const theme: ITheme = {
   colors: {
     primary: "#212121",
-    accent: "#FF474D",
+    accent: "#ff474d",
     secondary: "#5C5C5C",
     placeholder: "#bdbdbd",
     input: "#f3f4f5",
-    accent_red: "#FB242B",
+    accent_red: "#fb242b",
     accent_bg_red: "rgba(251, 36, 43, 0.6)",
     background_grey: "#f3f4f5",
     white: "#ffffff",
@@ -123,6 +123,10 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+
+  a {
+    text-decoration: none;
   }
 
 h1,

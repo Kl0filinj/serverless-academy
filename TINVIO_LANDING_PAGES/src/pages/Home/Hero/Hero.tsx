@@ -1,18 +1,19 @@
 import React from "react";
 import {
   HeroHomeTitle,
+  HeroQuoteEmojiIcon,
   HeroRedBgRectangle,
   HeroRedRectangle,
   HeroSection,
-  UnderButtonText,
 } from "./HeroHome.styled";
 import {
   AccentButton,
   ContentContainer,
+  QuoteWithEmoji,
   SectionSubtitle,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
-import smileEmojiIcon from "@/assets/shared/heroSection/smile_emoji.svg";
+import smileEmojiIcon from "@/assets/shared/Home/heroSection/smile_emoji.svg";
 import heroStarsIcon from "@/assets/shared/Home/heroSection/hero_stars.svg";
 import smalldotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
 import smarterMedDotsIconStyles from "@/assets/shared/dots/big_20_dots_group.svg";
@@ -75,7 +76,12 @@ const Hero: React.FC = () => {
           faster, reconcile quicker, grow bigger.
         </SectionSubtitle>
         <AccentButton>Get Started Now</AccentButton>
-        <UnderButtonText>It's free to try!</UnderButtonText>
+        <QuoteWithEmoji>
+          It's free to try!
+          <HeroQuoteEmojiIcon>
+            <img src={smileEmojiIcon} alt="Smile Emoji Icon" />
+          </HeroQuoteEmojiIcon>
+        </QuoteWithEmoji>
         <SvgContainer styles={phoneHeroImageStyles}>
           <img
             srcSet={`${phoneHeroImage1x} 1x, ${phoneHeroImage2x} 2x`}

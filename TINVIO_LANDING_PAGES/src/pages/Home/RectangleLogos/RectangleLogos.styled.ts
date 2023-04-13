@@ -8,7 +8,7 @@ interface ReactangleLogosItemProps {
 }
 
 export const ReactangleLogosSection = styled.section`
-  margin-bottom: 148px;
+  margin-bottom: 124px;
   position: relative;
 `;
 

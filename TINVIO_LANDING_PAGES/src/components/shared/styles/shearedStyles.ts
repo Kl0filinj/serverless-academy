@@ -109,3 +109,18 @@ export const SkewedInnerContainer = styled.div`
   margin: 0px auto;
   position: relative;
 `;
+
+export const QuoteWithEmoji = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "GiloryRegular";
+  font-weight: 400;
+  font-size: ${theme.fontSizes.small_mb};
+  line-height: 17px;
+  color: ${theme.colors.placeholder};
+`;
+
+export const QuoteEmojiIcon = styled.div`
+  margin-left: 8px;
+`;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { theme } from "@/theme";
 import {
   HeroTitle,
+  QuoteEmojiIcon,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 
@@ -43,16 +44,6 @@ export const HeroRedBgRectangle = styled.div`
   z-index: -1;
 `;
 
-export const UnderButtonText = styled.span`
-  display: flex;
-  justify-content: center;
-  font-family: "GiloryRegular";
-  font-size: ${theme.fontSizes.small_mb};
-  line-height: 17px;
-  text-align: center;
+export const HeroQuoteEmojiIcon = styled(QuoteEmojiIcon)`
   margin-top: 12px;
-
-  color: ${theme.colors.secondary};
 `;
-
-export const HeroImage = styled(SvgContainer)``;
