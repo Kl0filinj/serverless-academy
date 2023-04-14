@@ -1,5 +1,6 @@
 import { theme } from "@/theme";
 import styled, { keyframes } from "styled-components";
+import medDotsGroupIcon from "@/assets/shared/dots/med_17_dots_group.svg";
 
 interface ReactangleLogosItemProps {
   styles?: {
@@ -10,6 +11,17 @@ interface ReactangleLogosItemProps {
 export const ReactangleLogosSection = styled.section`
   margin-bottom: 124px;
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(${medDotsGroupIcon});
+    width: 231px;
+    height: 175px;
+    top: -67px;
+    left: 281px;
+    z-index: -1;
+  }
 `;
 
 export const ReactangleLogosContainer = styled.div`

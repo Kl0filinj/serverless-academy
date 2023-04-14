@@ -33,21 +33,11 @@ import PetShopLogoIcon from "@/assets/Home/shared/rectangleLogos/Pet_Shop_logo_i
 import TKLogoIcon from "@/assets/Home/shared/rectangleLogos/TK_logo_icon.svg";
 
 import smileIcon from "@/assets/Home/shared/rectangleLogos/smile_icon.svg";
-import medDotsGroupIcon from "@/assets/shared/dots/med_17_dots_group.svg";
-
-const medDotsGroupIconStyles = {
-  top: "-67px",
-  left: "281px",
-  "z-index": "-1",
-};
 
 const RectangleLogos: React.FC = () => {
   return (
     <ReactangleLogosSection>
       <ContentContainer>
-        <SvgContainer styles={medDotsGroupIconStyles}>
-          <img src={medDotsGroupIcon} alt="Dots Icon" />
-        </SvgContainer>
         <SectionTitle>We`ll put a smile on your supply chain </SectionTitle>
         <ReactangleLogosContainer>
           <ReactangleLogosItem>

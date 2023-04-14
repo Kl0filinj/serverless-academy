@@ -1,5 +1,16 @@
+import {
+  FlexContainer,
+  SvgContainer,
+} from "@/components/shared/styles/shearedStyles";
 import { theme } from "@/theme";
 import styled from "styled-components";
+
+interface SliderCardImageProps {
+  size: {
+    width: string;
+    height: string;
+  };
+}
 
 export const SliderCardContainer = styled.div`
   display: flex;
@@ -29,7 +40,7 @@ export const SliderCardTextContainer = styled.div`
 `;
 
 export const SliderCardText = styled.p`
-  font-size: ${theme.fontSizes.medium_mb};
+  font-size: ${theme.fontSizes.mobile.md};
   line-height: 1.44;
   /* or 144% */
 
@@ -43,4 +54,9 @@ export const SliderCardLogoIconContainer = styled.div`
   justify-content: start;
   align-items: center;
   padding: 20px 16px 20px 24px;
+`;
+
+export const SliderCardImage = styled(FlexContainer)<SliderCardImageProps>`
+  width: ${(p) => p.size.width};
+  height: ${(p) => p.size.height};
 `;

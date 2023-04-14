@@ -1,6 +1,10 @@
 import { theme } from "@/theme";
+import { SvgContainer } from "@/components/shared/styles/shearedStyles";
 import styled from "styled-components";
 import listsDot from "@/assets/shared/dots/lists_red_dot.svg";
+import smarterStarsIcon from "@/assets/Home/shared/smarter/smarterStars.svg";
+import smarterBigDostIcon from "@/assets/shared/dots/big_25_dots_group.svg";
+import smarterMedDostIcon from "@/assets/shared/dots/med_17_dots_group.svg";
 
 interface ISmarterOptionButton {
   isActive: boolean;
@@ -39,7 +43,7 @@ export const SmarterDescriptionListItem = styled.li`
   padding: 0px 0px 0px 27px;
   text-align: start;
   position: relative;
-  font-size: ${theme.fontSizes.small_mb};
+  font-size: ${theme.fontSizes.mobile.sm};
   line-height: 20px;
 
   &::before {
@@ -55,7 +59,7 @@ export const SmarterDescriptionListItem = styled.li`
 
 export const SmarterDescription = styled.p`
   font-family: "InterRegular";
-  font-size: ${theme.fontSizes.small_mb};
+  font-size: ${theme.fontSizes.mobile.sm};
   line-height: 1.43;
 
   color: ${theme.colors.primary};
@@ -84,4 +88,59 @@ export const SmarterRedBgRectangle = styled.div`
   width: 451px;
   height: 451px;
   margin-top: 57px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(${smarterBigDostIcon});
+    transform: rotate(45deg);
+    width: 277px;
+    height: 222px;
+    left: 234px;
+    top: 86px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(${smarterMedDostIcon});
+    transform: rotate(45deg);
+    width: 215px;
+    height: 162px;
+    left: 552px;
+    top: 2px;
+  }
+`;
+
+export const SmarterPhoneOrdersImageContainer = styled(SvgContainer)`
+  transform: rotate(45deg);
+  width: 225px;
+  height: 520px;
+  right: 52%;
+  top: -60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(${smarterStarsIcon});
+    width: 82px;
+    height: 130px;
+    left: 18px;
+    top: -96px;
+    z-index: -1;
+  }
+`;
+
+export const SmarterPhoneOrdersStarsIcon = styled(SvgContainer)`
+  left: 18px;
+  top: -96px;
+  z-index: -1;
+`;
+
+export const SmarterPhoneChatsImageContainer = styled(SvgContainer)`
+  transform: rotate(45deg);
+  width: 225px;
+  height: 536px;
+  left: 24%;
+  top: 136px;
 `;

@@ -3,6 +3,8 @@ import {
   SmarterDescriptionListItem,
   SmarterOptionButton,
   SmarterOptionsGroup,
+  SmarterPhoneChatsImageContainer,
+  SmarterPhoneOrdersImageContainer,
   SmarterRedBgRectangle,
   SmarterRedRectangle,
   SmarterSection,
@@ -12,17 +14,16 @@ import {
   ContentContainer,
   FlexContainer,
   SectionTitle,
-  SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 
-import smarterBigDostIcon from "@/assets/shared/dots/big_25_dots_group.svg";
-import smarterMedDostIcon from "@/assets/shared/dots/med_17_dots_group.svg";
-import smarterStarsIcon from "@/assets/Home/shared/smarter/smarterStars.svg";
-
-import smarterPhoneOrdersImage1x from "@/assets/Home/mobile/smarter/smarter_phone_orders_x1.png";
-import smarterPhoneOrdersImage2x from "@/assets/Home/mobile/smarter/smarter_phone_orders_x2.png";
-import smarterPhoneChatsImage1x from "@/assets/Home/mobile/smarter/smarter_phone_chats_x1.png";
-import smarterPhoneChatsImage2x from "@/assets/Home/mobile/smarter/smarter_phone_chats_x2.png";
+import mobile_smarterPhoneOrdersImage1x from "@/assets/Home/mobile/smarter/smarter_phone_orders_x1.png";
+import mobile_smarterPhoneOrdersImage2x from "@/assets/Home/mobile/smarter/smarter_phone_orders_x2.png";
+import tablet_smarterPhoneOrdersImage1x from "@/assets/Home/tablet/smarter/smarter_phone_orders_x1.png";
+import tablet_smarterPhoneOrdersImage2x from "@/assets/Home/tablet/smarter/smarter_phone_orders_x2.png";
+import mobile_smarterPhoneChatsImage1x from "@/assets/Home/mobile/smarter/smarter_phone_chats_x1.png";
+import mobile_smarterPhoneChatsImage2x from "@/assets/Home/mobile/smarter/smarter_phone_chats_x2.png";
+import tablet_smarterPhoneChatsImage1x from "@/assets/Home/tablet/smarter/smarter_phone_chats_x1.png";
+import tablet_smarterPhoneChatsImage2x from "@/assets/Home/tablet/smarter/smarter_phone_chats_x2.png";
 
 type optionsType = "Chats" | "Orders" | "Payments";
 
@@ -33,40 +34,6 @@ const optionsDescription = {
     "Create or confirm purchase orders at lightning speed^Manage inventory details and availability in real-time^24/7 order insights and data reports",
   Payments:
     "Send invoices and easily track them until they're paid^Real-time payments settlement and reconciliation^Safe, secure, and compliant",
-};
-
-const smarterPhoneOrdersImageStyles = {
-  transform: "rotate(45deg)",
-  height: "520px",
-  width: "225px",
-  right: "52%",
-  top: "-60px",
-};
-
-const smarterPhoneChatsImageStyles = {
-  transform: "rotate(45deg)",
-  height: "520px",
-  width: "225px",
-  left: "24%",
-  top: "136px",
-};
-
-const smarterBigDotsIconStyles = {
-  transform: "rotate(45deg)",
-  left: "234px",
-  top: "86px",
-};
-
-const smarterMedDotsIconStyles = {
-  transform: "rotate(45deg)",
-  left: "552px",
-  top: "2px",
-};
-
-const smarterStarsIconStyles = {
-  left: "18px",
-  top: "-96px",
-  "z-index": "-1",
 };
 
 const SmarterSuplyChain = () => {
@@ -138,31 +105,56 @@ const SmarterSuplyChain = () => {
         </div>
         <SmarterRedBgRectangle>
           <SmarterRedRectangle>
-            <SvgContainer styles={smarterBigDotsIconStyles}>
-              <img src={smarterBigDostIcon} alt="Dots Icon" />
-            </SvgContainer>
-            <SvgContainer styles={smarterMedDotsIconStyles}>
-              <img src={smarterMedDostIcon} alt="Dots Icon" />
-            </SvgContainer>
-            <SvgContainer styles={smarterPhoneOrdersImageStyles}>
-              <img
-                srcSet={`${smarterPhoneOrdersImage1x} 1x, ${smarterPhoneOrdersImage2x} 2x`}
-                src={smarterPhoneOrdersImage1x}
-                width="100%"
-                alt="Phone preview"
-              />
-              <SvgContainer styles={smarterStarsIconStyles}>
-                <img src={smarterStarsIcon} alt="Stars Icon" />
-              </SvgContainer>
-            </SvgContainer>
-            <SvgContainer styles={smarterPhoneChatsImageStyles}>
-              <img
-                srcSet={`${smarterPhoneChatsImage1x} 1x, ${smarterPhoneChatsImage2x} 2x`}
-                src={smarterPhoneChatsImage1x}
-                width="100%"
-                alt="Phone preview"
-              />
-            </SvgContainer>
+            {/* IMAGES */}
+            <SmarterPhoneOrdersImageContainer>
+              <picture>
+                <source
+                  srcSet={`${mobile_smarterPhoneOrdersImage1x} 1x, ${mobile_smarterPhoneOrdersImage2x} 2x`}
+                  media="(max-width: 767px)"
+                  type="image/png"
+                />
+                <source
+                  srcSet={`${tablet_smarterPhoneOrdersImage1x} 1x, ${tablet_smarterPhoneOrdersImage2x} 2x`}
+                  media="(min-width: 768px)"
+                  type="image/png"
+                />
+                {/* <source
+              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
+              media="(min-width: 1200px)"
+              type="image/png"
+            /> */}
+                <img
+                  src={mobile_smarterPhoneOrdersImage1x}
+                  alt="Phone Image"
+                  width="100%"
+                />
+              </picture>
+            </SmarterPhoneOrdersImageContainer>
+            <SmarterPhoneChatsImageContainer>
+              <picture>
+                <source
+                  srcSet={`${mobile_smarterPhoneChatsImage1x} 1x, ${mobile_smarterPhoneChatsImage2x} 2x`}
+                  media="(max-width: 767px)"
+                  type="image/png"
+                />
+                <source
+                  srcSet={`${tablet_smarterPhoneChatsImage1x} 1x, ${tablet_smarterPhoneChatsImage2x} 2x`}
+                  media="(min-width: 768px)"
+                  type="image/png"
+                />
+                {/* <source
+              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
+              media="(min-width: 1200px)"
+              type="image/png"
+            /> */}
+                <img
+                  src={mobile_smarterPhoneOrdersImage1x}
+                  alt="Phone Image"
+                  width="100%"
+                />
+              </picture>
+            </SmarterPhoneChatsImageContainer>
+            {/* IMAGES */}
           </SmarterRedRectangle>
         </SmarterRedBgRectangle>
       </ContentContainer>

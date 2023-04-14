@@ -1,6 +1,7 @@
 import { SectionTitle } from "@/components/shared/styles/shearedStyles";
 import { theme } from "@/theme";
 import styled from "styled-components";
+import bigDotsIcon from "@/assets/shared/dots/big_20_dots_group.svg";
 
 export const FeaturedSection = styled.section`
   position: relative;
@@ -9,7 +10,17 @@ export const FeaturedSection = styled.section`
     rgb(247, 247, 247) 0%,
     rgb(250, 250, 250) 100%
   );
-  border-radius: 0px 40px 40px 0px; ;
+  border-radius: 0px 40px 40px 0px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(${bigDotsIcon});
+    width: 280px;
+    height: 213px;
+    top: -86px;
+    left: 299px;
+  }
 `;
 
 export const FeaturedTitle = styled(SectionTitle)`
@@ -20,9 +31,9 @@ export const FeaturedTitle = styled(SectionTitle)`
 
 export const FeaturedLogoList = styled.ul`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   padding: 0 20px;
 
   @media screen and (min-width: 475px) {

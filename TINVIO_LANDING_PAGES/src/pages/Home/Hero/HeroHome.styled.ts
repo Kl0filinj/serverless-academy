@@ -5,6 +5,8 @@ import {
   QuoteEmojiIcon,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
+import smalldotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
+import smarterMedDotsIcon from "@/assets/shared/dots/big_20_dots_group.svg";
 
 export const HeroSection = styled.section`
   position: relative;
@@ -31,6 +33,33 @@ export const HeroRedRectangle = styled.div`
   align-items: center;
   width: 615px;
   height: 615px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(${smalldotsIcon});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 149px;
+    height: 123px;
+    left: 492px;
+    top: 36px;
+    transform: rotate(45deg);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(${smarterMedDotsIcon});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 277px;
+    height: 210px;
+    left: 358px;
+    top: 428px;
+    transform: rotate(45deg);
+  }
 `;
 
 export const HeroRedBgRectangle = styled.div`
@@ -66,4 +95,11 @@ export const PhoneHeroImageContainer = styled(SvgContainer)`
   width: 125px;
   right: 257px;
   top: 490px;
+`;
+
+export const PcHeroImageContainer = styled(SvgContainer)`
+  height: 311px;
+  width: 465px;
+  right: -193px;
+  top: 372px;
 `;

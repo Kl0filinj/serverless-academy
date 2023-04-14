@@ -5,6 +5,7 @@ import {
   SliderCardTextContainer,
   SliderCardText,
   SliderCardLogoIconContainer,
+  SliderCardImage,
 } from "./SliderCard.styled";
 import { SvgContainer } from "@/components/shared/styles/shearedStyles";
 
@@ -12,8 +13,18 @@ import quotesIcon from "@/assets/Home/shared/whyChoose/quotes_icon.svg";
 
 interface SliderCardProps {
   mainImage: {
-    x1: string;
-    x2: string;
+    mobile: {
+      x1: string;
+      x2: string;
+    };
+    tablet: {
+      x1: string;
+      x2: string;
+    };
+    desktop: {
+      x1: string;
+      x2: string;
+    };
   };
   mainImageSize: {
     width: string;
@@ -36,15 +47,26 @@ const SliderCard: React.FC<SliderCardProps> = ({
 }) => {
   return (
     <SliderCardContainer>
-      <SliderCardImageContainer>
-        <img
-          srcSet={`${mainImage.x1} 1x, ${mainImage.x2} 2x`}
-          src={mainImage.x1}
-          width={mainImageSize.width}
-          height={mainImageSize.height}
-          alt="Card Icon"
-        />
-      </SliderCardImageContainer>
+      <SliderCardImage size={mainImageSize}>
+        <picture>
+          <source
+            srcSet={`${mainImage.mobile.x1} 1x, ${mainImage.mobile.x2} 2x`}
+            media="(max-width: 767px)"
+            type="image/png"
+          />
+          <source
+            srcSet={`${mainImage.tablet.x1} 1x, ${mainImage.tablet.x2} 2x`}
+            media="(min-width: 768px)"
+            type="image/png"
+          />
+          {/* <source
+              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
+              media="(min-width: 1200px)"
+              type="image/png"
+            /> */}
+          <img src={mainImage.mobile.x1} alt="Image" />
+        </picture>
+      </SliderCardImage>
       <SliderCardTextContainer>
         <SliderCardText>{descriptionText}</SliderCardText>
       </SliderCardTextContainer>
