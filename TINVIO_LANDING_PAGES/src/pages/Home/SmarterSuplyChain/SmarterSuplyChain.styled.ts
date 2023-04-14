@@ -15,8 +15,8 @@ export const SmarterOptionsGroup = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin: 24px 0;
+  max-width: 387px;
+  margin: 24px auto;
 `;
 
 export const SmarterOptionButton = styled.button<ISmarterOptionButton>`

@@ -30,16 +30,13 @@ const Footer: React.FC = () => {
             </div>
             <FooterNav>
               <li>
-                <FooterNavLinks href="#">Home</FooterNavLinks>
+                <FooterNavLinks to="/">Home</FooterNavLinks>
               </li>
               <li>
-                <FooterNavLinks href="#">Features</FooterNavLinks>
+                <FooterNavLinks to="/feature">Features</FooterNavLinks>
               </li>
               <li>
-                <FooterNavLinks href="#">Company</FooterNavLinks>
-              </li>
-              <li>
-                <FooterNavLinks href="#">Legal Info</FooterNavLinks>
+                <FooterNavLinks to="/company">Company</FooterNavLinks>
               </li>
             </FooterNav>
           </div>

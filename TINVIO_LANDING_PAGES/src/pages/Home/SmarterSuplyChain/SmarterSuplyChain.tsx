@@ -10,6 +10,7 @@ import {
 import {
   AccentLinkButton,
   ContentContainer,
+  FlexContainer,
   SectionTitle,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
@@ -119,17 +120,19 @@ const SmarterSuplyChain = () => {
             </SmarterOptionButton>
           </li>
         </SmarterOptionsGroup>
-        <ul>
-          <SmarterDescriptionListItem>
-            <p>{currentOptionsDescription[0]}</p>
-          </SmarterDescriptionListItem>
-          <SmarterDescriptionListItem>
-            <p>{currentOptionsDescription[1]}</p>
-          </SmarterDescriptionListItem>
-          <SmarterDescriptionListItem>
-            <p>{currentOptionsDescription[2]}</p>
-          </SmarterDescriptionListItem>
-        </ul>
+        <FlexContainer>
+          <ul>
+            <SmarterDescriptionListItem>
+              <p>{currentOptionsDescription[0]}</p>
+            </SmarterDescriptionListItem>
+            <SmarterDescriptionListItem>
+              <p>{currentOptionsDescription[1]}</p>
+            </SmarterDescriptionListItem>
+            <SmarterDescriptionListItem>
+              <p>{currentOptionsDescription[2]}</p>
+            </SmarterDescriptionListItem>
+          </ul>
+        </FlexContainer>
         <div>
           <AccentLinkButton to="/">More Features</AccentLinkButton>
         </div>

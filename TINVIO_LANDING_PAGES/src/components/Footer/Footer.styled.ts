@@ -1,4 +1,5 @@
 import { theme } from "@/theme";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const FooterS = styled.footer`
@@ -12,7 +13,7 @@ export const FooterContainer = styled.div`
   align-items: center;
 `;
 
-export const FooterNavLinks = styled.a`
+export const FooterNavLinks = styled(NavLink)`
   font-family: "GiloryRegular";
   font-weight: 400;
   font-size: ${theme.fontSizes.small_mb};

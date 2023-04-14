@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 interface SvgContainerProps {
-  styles: IstylesObject;
+  styles?: IstylesObject;
+  isBgUrl?: boolean;
 }
 
 interface IstylesObject {
@@ -13,15 +14,22 @@ interface IstylesObject {
 export const HeroTitle = styled.h1`
   font-family: "GilorySemiBold";
   font-weight: ${theme.fontWeight.semi_bold};
-  font-size: ${theme.fontSizes.large_mb};
+  font-size: ${theme.fontSizes.mobile.lg};
   line-height: 34px;
 
   color: ${theme.colors.primary};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.xl};
+    line-height: 39px;
+    margin: 0px auto 16px;
+    max-width: 333px;
+  }
 `;
 
 export const SectionTitle = styled.h2`
   font-family: "GilorySemiBold";
-  font-size: ${theme.fontSizes.large_mb};
+  font-size: ${theme.fontSizes.mobile.lg};
   line-height: 33px;
 
   /* display: flex;
@@ -32,13 +40,24 @@ export const SectionTitle = styled.h2`
 
 export const SectionSubtitle = styled.p`
   font-family: "InterRegular";
-  font-size: ${theme.fontSizes.small_mb};
+  font-size: ${theme.fontSizes.mobile.sm};
   line-height: 1.57;
 
-  margin: 16px;
+  margin: 16px 16px 0px;
   text-align: center;
 
   color: ${theme.colors.secondary};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.md};
+    line-height: 24px;
+  }
+`;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const AccentButton = styled.button`
@@ -50,7 +69,7 @@ export const AccentButton = styled.button`
 
   font-family: "GiloryBold";
   font-weight: ${theme.fontWeight.bold};
-  font-size: ${theme.fontSizes.medium_mb};
+  font-size: ${theme.fontSizes.mobile.md};
   line-height: 20px;
 
   text-align: center;
@@ -68,7 +87,7 @@ export const AccentLinkButton = styled(NavLink)`
 
   font-family: "GiloryBold";
   font-weight: ${theme.fontWeight.bold};
-  font-size: ${theme.fontSizes.medium_mb};
+  font-size: ${theme.fontSizes.mobile.md};
   line-height: 20px;
 
   text-align: center;
@@ -84,6 +103,9 @@ export const AccentWhiteButton = styled(AccentButton)`
 export const ContentContainer = styled.div`
   max-width: ${theme.breakPoints.xs};
   margin: 0 auto;
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    max-width: 490px;
+  }
 `;
 
 export const SvgContainer = styled.div<SvgContainerProps>`
@@ -116,9 +138,9 @@ export const QuoteWithEmoji = styled.div`
   align-items: center;
   font-family: "GiloryRegular";
   font-weight: 400;
-  font-size: ${theme.fontSizes.small_mb};
+  font-size: ${theme.fontSizes.mobile.sm};
   line-height: 17px;
-  color: ${theme.colors.placeholder};
+  color: ${theme.colors.secondary};
 `;
 
 export const QuoteEmojiIcon = styled.div`

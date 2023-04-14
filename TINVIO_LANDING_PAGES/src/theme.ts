@@ -18,9 +18,18 @@ export interface ITheme {
     white: string;
   };
   fontSizes: {
-    large_mb: string;
-    small_mb: string;
-    medium_mb: string;
+    mobile: {
+      lg: string;
+      sm: string;
+      md: string;
+    };
+    tablet: {
+      xl: string;
+      lg: string;
+      sm: string;
+      md: string;
+      xs: string;
+    };
   };
   fontWeight: {
     medium: number;
@@ -29,6 +38,14 @@ export interface ITheme {
     normal: number;
   };
   breakPoints: {
+    xs: string;
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+    xl2: string;
+  };
+  containerWidth: {
     xs: string;
     sm: string;
     md: string;
@@ -51,9 +68,18 @@ export const theme: ITheme = {
     white: "#ffffff",
   },
   fontSizes: {
-    large_mb: "28px",
-    small_mb: "14px",
-    medium_mb: "16px",
+    mobile: {
+      lg: "28px",
+      sm: "14px",
+      md: "16px",
+    },
+    tablet: {
+      xl: "32px",
+      lg: "24px",
+      md: "16px",
+      sm: "14px",
+      xs: "12px",
+    },
   },
   fontWeight: {
     medium: 500,
@@ -68,6 +94,14 @@ export const theme: ITheme = {
     lg: "1280px",
     xl: "1440px",
     xl2: "1920px",
+  },
+  containerWidth: {
+    xs: "375px",
+    sm: "490px",
+    md: "",
+    lg: "",
+    xl: "",
+    xl2: "",
   },
 };
 

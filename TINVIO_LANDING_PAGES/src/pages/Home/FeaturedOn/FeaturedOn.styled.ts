@@ -24,6 +24,10 @@ export const FeaturedLogoList = styled.ul`
   align-items: center;
   flex-wrap: wrap;
   padding: 0 20px;
+
+  @media screen and (min-width: 475px) {
+    justify-content: space-between;
+  }
 `;
 
 export const FeaturedLogoListItem = styled.li`

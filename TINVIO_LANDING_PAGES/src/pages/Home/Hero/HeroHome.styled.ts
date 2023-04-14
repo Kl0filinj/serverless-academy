@@ -10,8 +10,13 @@ export const HeroSection = styled.section`
   position: relative;
   text-align: center;
   margin-top: 140px;
-  max-width: ${theme.breakPoints.xs};
+  max-width: ${theme.containerWidth.xs};
   padding: 24px 21px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    max-width: calc(${theme.containerWidth.sm} + 42px);
+    margin-top: 92px;
+  }
 `;
 
 export const HeroHomeTitle = styled(HeroTitle)`
@@ -46,4 +51,19 @@ export const HeroRedBgRectangle = styled.div`
 
 export const HeroQuoteEmojiIcon = styled(QuoteEmojiIcon)`
   margin-top: 12px;
+`;
+
+export const SmallDotsGroupIconStyles = styled(SvgContainer)`
+  transform: rotate(-45deg);
+  height: 123px;
+  width: 149px;
+  right: -76px;
+  top: 113px;
+`;
+
+export const PhoneHeroImageContainer = styled(SvgContainer)`
+  height: 242px;
+  width: 125px;
+  right: 257px;
+  top: 490px;
 `;

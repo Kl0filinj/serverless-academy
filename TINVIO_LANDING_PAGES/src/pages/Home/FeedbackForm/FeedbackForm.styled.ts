@@ -12,6 +12,9 @@ export const FeedbackSection = styled.section`
 `;
 
 export const FeedbackPanel = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: radial-gradient(
     95.51% 95.51% at 50% 50%,
     rgba(255, 255, 255, 0.3) 0%,
