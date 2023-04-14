@@ -1,32 +1,31 @@
 import React, { Key, useState } from "react";
-import Slider from "react-slick";
-import SliderCard from "./SliderCard";
-
-import cardRiseMainImage1x from "@/assets/mobile/whyChoose/card_rise_image_x1.png";
-import cardRiseMainImage2x from "@/assets/mobile/whyChoose/card_rise_image_x2.png";
-import cardCoffeeMainImage1x from "@/assets/mobile/whyChoose/card_coffee_image_x1.png";
-import cardCoffeeMainImage2x from "@/assets/mobile/whyChoose/card_coffee_image_x2.png";
-import cardMilkMainImage1x from "@/assets/mobile/whyChoose/card_milk_image_x1.png";
-import cardMilkMainImage2x from "@/assets/mobile/whyChoose/card_milk_image_x2.png";
-import cardEggsMainImage1x from "@/assets/mobile/whyChoose/card_eggs_image_x1.png";
-import cardEggsMainImage2x from "@/assets/mobile/whyChoose/card_eggs_image_x2.png";
-
-import cardRiseCompanyLogoIcon from "@/assets/shared/Home/whyChooseSection/card_rise_company_logo.svg";
-import cardCoffeeCompanyLogoIcon from "@/assets/shared/Home/whyChooseSection/card_coffee_company_logo.svg";
-import cardMilkCompanyLogoIcon from "@/assets/shared/Home/whyChooseSection/card_milk_company_logo.svg";
-import cardEggsCompanyLogoIcon from "@/assets/shared/Home/whyChooseSection/card_eggs_company_logo.svg";
-
-import inactivePaginationDotIcon from "@/assets/shared/dots/pagination_inactive_dot_icon.svg";
-import activePaginationDotIcon from "@/assets/shared/dots/pagination_active_dot_icon.svg";
-import starsGroupIcon from "@/assets/shared/Home/whyChooseSection/stars_group.svg";
-import bigDotsGroupIcon from "@/assets/shared/dots/big_25_dots_group.svg";
-
 import {
   ContentContainer,
   SkewedInnerContainer,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 import { WhyChooseSection, WhyChooseSectionTitle } from "./WhyChoose.styled";
+import Slider from "react-slick";
+import SliderCard from "./SliderCard";
+
+import cardRiseMainImage1x from "@/assets/Home/mobile/whyChoose/card_rise_image_x1.png";
+import cardRiseMainImage2x from "@/assets/Home/mobile/whyChoose/card_rise_image_x2.png";
+import cardCoffeeMainImage1x from "@/assets/Home/mobile/whyChoose/card_coffee_image_x1.png";
+import cardCoffeeMainImage2x from "@/assets/Home/mobile/whyChoose/card_coffee_image_x2.png";
+import cardMilkMainImage1x from "@/assets/Home/mobile/whyChoose/card_milk_image_x1.png";
+import cardMilkMainImage2x from "@/assets/Home/mobile/whyChoose/card_milk_image_x2.png";
+import cardEggsMainImage1x from "@/assets/Home/mobile/whyChoose/card_eggs_image_x1.png";
+import cardEggsMainImage2x from "@/assets/Home/mobile/whyChoose/card_eggs_image_x2.png";
+
+import cardRiseCompanyLogoIcon from "@/assets/Home/shared/whyChoose/card_rise_company_logo.svg";
+import cardCoffeeCompanyLogoIcon from "@/assets/Home/shared/whyChoose/card_coffee_company_logo.svg";
+import cardMilkCompanyLogoIcon from "@/assets/Home/shared/whyChoose/card_milk_company_logo.svg";
+import cardEggsCompanyLogoIcon from "@/assets/Home/shared/whyChoose/card_eggs_company_logo.svg";
+
+import inactivePaginationDotIcon from "@/assets/shared/dots/pagination_inactive_dot_icon.svg";
+import activePaginationDotIcon from "@/assets/shared/dots/pagination_active_dot_icon.svg";
+import starsGroupIcon from "@/assets/Home/shared/whyChoose/stars_group.svg";
+import bigDotsGroupIcon from "@/assets/shared/dots/big_25_dots_group.svg";
 
 interface ICardInfo {
   descriptionText: string;

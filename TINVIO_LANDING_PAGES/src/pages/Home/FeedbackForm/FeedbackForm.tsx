@@ -16,9 +16,9 @@ import {
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 
-import handsEmojiIcon from "@/assets/shared/Home/feedbackFormSection/hands_emoji_icon.svg";
-import dotsMapImage1x from "@/assets/mobile/feedbackForm/dots_map_1x.png";
-import dotsMapImage2x from "@/assets/mobile/feedbackForm/dots_map_2x.png";
+import handsEmojiIcon from "@/assets/Home/shared/feedbackForm/hands_emoji_icon.svg";
+import dotsMapImage1x from "@/assets/Home/mobile/feedbackForm/dots_map_1x.png";
+import dotsMapImage2x from "@/assets/Home/mobile/feedbackForm/dots_map_2x.png";
 
 const FeedbackForm: React.FC = () => {
   return (

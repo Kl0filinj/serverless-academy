@@ -1,8 +1,9 @@
 import React from "react";
-import logo from "@/assets/shared/tinvio_logo.svg";
-import burgerMenu from "@/assets/shared/burger_menu_btn.svg";
 import { BurgerMenuBtn, HeaderContainer, HeaderS } from "./Header.styled";
 import { ContentContainer } from "../shared/styles/shearedStyles";
+
+import logo from "@/assets/shared/header/tinvio_logo.svg";
+import burgerMenu from "@/assets/shared/header/burger_menu_btn.svg";
 
 const Header: React.FC = () => {
   return (

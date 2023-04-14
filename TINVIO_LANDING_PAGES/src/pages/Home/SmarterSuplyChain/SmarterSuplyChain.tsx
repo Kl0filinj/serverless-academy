@@ -13,14 +13,15 @@ import {
   SectionTitle,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
+
 import smarterBigDostIcon from "@/assets/shared/dots/big_25_dots_group.svg";
 import smarterMedDostIcon from "@/assets/shared/dots/med_17_dots_group.svg";
-import smarterStarsIcon from "@/assets/shared/Home/smarterSection/smarterStars.svg";
+import smarterStarsIcon from "@/assets/Home/shared/smarter/smarterStars.svg";
 
-import smarterPhoneOrdersImage1x from "@/assets/mobile/smarter/smarter_phone_orders_x1.png";
-import smarterPhoneOrdersImage2x from "@/assets/mobile/smarter/smarter_phone_orders_x2.png";
-import smarterPhoneChatsImage1x from "@/assets/mobile/smarter/smarter_phone_chats_x1.png";
-import smarterPhoneChatsImage2x from "@/assets/mobile/smarter/smarter_phone_chats_x2.png";
+import smarterPhoneOrdersImage1x from "@/assets/Home/mobile/smarter/smarter_phone_orders_x1.png";
+import smarterPhoneOrdersImage2x from "@/assets/Home/mobile/smarter/smarter_phone_orders_x2.png";
+import smarterPhoneChatsImage1x from "@/assets/Home/mobile/smarter/smarter_phone_chats_x1.png";
+import smarterPhoneChatsImage2x from "@/assets/Home/mobile/smarter/smarter_phone_chats_x2.png";
 
 type optionsType = "Chats" | "Orders" | "Payments";
 

@@ -12,10 +12,10 @@ import {
 } from "./FeaturedOn.styled";
 import bigDotsIcon from "@/assets/shared/dots/big_20_dots_group.svg";
 
-import TechCrunchLogo from "@/assets/shared/Home/featuredOnSection/Tech_Crunch_logo.svg";
-import TechInAsiaLogo from "@/assets/shared/Home/featuredOnSection/Tech_In_Asia_logo.svg";
-import PymntsLogo from "@/assets/shared/Home/featuredOnSection/Pymnts_logo.svg";
-import VentureBeatLogo from "@/assets/shared/Home/featuredOnSection/Venture_Beat_logo.svg";
+import TechCrunchLogo from "@/assets/Home/shared/featuredOn/Tech_Crunch_logo.svg";
+import TechInAsiaLogo from "@/assets/Home/shared/featuredOn/Tech_In_Asia_logo.svg";
+import PymntsLogo from "@/assets/Home/shared/featuredOn/Pymnts_logo.svg";
+import VentureBeatLogo from "@/assets/Home/shared/featuredOn/Venture_Beat_logo.svg";
 
 const FeaturedBigDotsIconStyles = {
   width: "280px",

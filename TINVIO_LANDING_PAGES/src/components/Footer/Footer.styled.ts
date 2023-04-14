@@ -66,6 +66,4 @@ export const FooterPrivacyLink = styled.a`
 
 export const FooterPrivacyTermsContainer = styled.div`
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 `;

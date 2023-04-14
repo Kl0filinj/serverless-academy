@@ -13,15 +13,16 @@ import {
   SectionSubtitle,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
-import smileEmojiIcon from "@/assets/shared/Home/heroSection/smile_emoji.svg";
-import heroStarsIcon from "@/assets/shared/Home/heroSection/hero_stars.svg";
+
+import smileEmojiIcon from "@/assets/Home/shared/hero/smile_emoji.svg";
+import heroStarsIcon from "@/assets/Home/shared/hero/hero_stars.svg";
 import smalldotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
 import smarterMedDotsIconStyles from "@/assets/shared/dots/big_20_dots_group.svg";
 
-import phoneHeroImage1x from "@/assets/mobile/hero/hero_phone_x1.png";
-import phoneHeroImage2x from "@/assets/mobile/hero/hero_phone_x2.png";
-import pcHeroImage1x from "@/assets/mobile/hero/hero_pc_x1.png";
-import pcHeroImage2x from "@/assets/mobile/hero/hero_pc_x2.png";
+import phoneHeroImage1x from "@/assets/Home/mobile/hero/hero_phone_x1.png";
+import phoneHeroImage2x from "@/assets/Home/mobile/hero/hero_phone_x2.png";
+import pcHeroImage1x from "@/assets/Home/mobile/hero/hero_pc_x1.png";
+import pcHeroImage2x from "@/assets/Home/mobile/hero/hero_pc_x2.png";
 
 const heroStarsGroupIconStyles = {
   height: "41px",

@@ -7,7 +7,8 @@ import {
   SliderCardLogoIconContainer,
 } from "./SliderCard.styled";
 import { SvgContainer } from "@/components/shared/styles/shearedStyles";
-import quotesIcon from "@/assets/shared/Home/whyChooseSection/quotes_icon.svg";
+
+import quotesIcon from "@/assets/Home/shared/whyChoose/quotes_icon.svg";
 
 interface SliderCardProps {
   mainImage: {

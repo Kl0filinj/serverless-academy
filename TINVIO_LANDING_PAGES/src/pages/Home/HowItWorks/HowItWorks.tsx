@@ -19,16 +19,16 @@ import {
 import medDotsGroupIcon from "@/assets/shared/dots/med_14_dots_group.svg";
 import bigDotsGroupIcon from "@/assets/shared/dots/big_20_dots_group.svg";
 
-import playIcon from "@/assets/shared/Home/howItworksSection/play_icon.svg";
-import chatCardIcon from "@/assets/shared/Home/howItworksSection/chat_card_icon.svg";
-import chatStarsIcon from "@/assets/shared/Home/howItworksSection/chat_stars.svg";
-import ordersCardIcon from "@/assets/shared/Home/howItworksSection/orders_card_icon.svg";
-import ordersStarsIcon from "@/assets/shared/Home/howItworksSection/order_stars.svg";
-import paymentsCardIcon from "@/assets/shared/Home/howItworksSection/payments_card_icon.svg";
-import paymentsStarsIcon from "@/assets/shared/Home/howItworksSection/payment_stars.svg";
-import paymentsSecondStarsIcon from "@/assets/shared/Home/howItworksSection/second_payment_stars.svg";
-import firstRedArrowCardIcon from "@/assets/shared/Home/howItworksSection/first_step_red_arrow.svg";
-import secondRedArrowCardIcon from "@/assets/shared/Home/howItworksSection/second_step_red_arrow.svg";
+import playIcon from "@/assets/Home/shared/howItworks/play_icon.svg";
+import chatCardIcon from "@/assets/Home/shared/howItworks/chat_card_icon.svg";
+import chatStarsIcon from "@/assets/Home/shared/howItworks/chat_stars.svg";
+import ordersCardIcon from "@/assets/Home/shared/howItworks/orders_card_icon.svg";
+import ordersStarsIcon from "@/assets/Home/shared/howItworks/order_stars.svg";
+import paymentsCardIcon from "@/assets/Home/shared/howItworks/payments_card_icon.svg";
+import paymentsStarsIcon from "@/assets/Home/shared/howItworks/payment_stars.svg";
+import paymentsSecondStarsIcon from "@/assets/Home/shared/howItworks/second_payment_stars.svg";
+import firstRedArrowCardIcon from "@/assets/Home/shared/howItworks/first_step_red_arrow.svg";
+import secondRedArrowCardIcon from "@/assets/Home/shared/howItworks/second_step_red_arrow.svg";
 
 const chatCardIconStyles = {
   transform: "matrix(0.98, -0.18, 0.18, 0.98, 0, 0)",

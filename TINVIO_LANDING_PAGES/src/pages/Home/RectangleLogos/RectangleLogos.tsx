@@ -21,18 +21,18 @@ import {
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 
-import BBSLogoIcon from "@/assets/shared/Home/rectangleLogosSection/BBS_logo_icon.svg";
-import BurgerLobsterLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Burger_Lobster_logo_icon.svg";
-import EstehLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Esteh_logo_icon.svg";
-import GongchaLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Gongcha_logo_icon.svg";
-import GroupOfCompaniensLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Goup_Of_Companiens_logo_icon.svg";
-import KhopakaLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Khopaka_logo_icon.svg";
-import NaylaLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Nayla_logo_icon.svg";
-import NexLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Nex_logo_icon.svg";
-import PetShopLogoIcon from "@/assets/shared/Home/rectangleLogosSection/Pet_Shop_logo_icon.svg";
-import TKLogoIcon from "@/assets/shared/Home/rectangleLogosSection/TK_logo_icon.svg";
+import BBSLogoIcon from "@/assets/Home/shared/rectangleLogos/BBS_logo_icon.svg";
+import BurgerLobsterLogoIcon from "@/assets/Home/shared/rectangleLogos/Burger_Lobster_logo_icon.svg";
+import EstehLogoIcon from "@/assets/Home/shared/rectangleLogos/Esteh_logo_icon.svg";
+import GongchaLogoIcon from "@/assets/Home/shared/rectangleLogos/Gongcha_logo_icon.svg";
+import GroupOfCompaniensLogoIcon from "@/assets/Home/shared/rectangleLogos/Goup_Of_Companiens_logo_icon.svg";
+import KhopakaLogoIcon from "@/assets/Home/shared/rectangleLogos/Khopaka_logo_icon.svg";
+import NaylaLogoIcon from "@/assets/Home/shared/rectangleLogos/Nayla_logo_icon.svg";
+import NexLogoIcon from "@/assets/Home/shared/rectangleLogos/Nex_logo_icon.svg";
+import PetShopLogoIcon from "@/assets/Home/shared/rectangleLogos/Pet_Shop_logo_icon.svg";
+import TKLogoIcon from "@/assets/Home/shared/rectangleLogos/TK_logo_icon.svg";
 
-import smileIcon from "@/assets/shared/Home/rectangleLogosSection/smile_icon.svg";
+import smileIcon from "@/assets/Home/shared/rectangleLogos/smile_icon.svg";
 import medDotsGroupIcon from "@/assets/shared/dots/med_17_dots_group.svg";
 
 const medDotsGroupIconStyles = {
