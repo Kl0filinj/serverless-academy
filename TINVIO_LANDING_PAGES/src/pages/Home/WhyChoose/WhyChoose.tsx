@@ -13,17 +13,6 @@ import activePaginationDotIcon from "@/assets/shared/dots/pagination_active_dot_
 
 import cardsInfo from "./cardsInfo";
 
-const starsGroupIconStyles = {
-  top: "-317px",
-  left: "50%",
-  transform: "translate(-46%, 0)",
-};
-
-const bigDotsGroupIconStyles = {
-  top: "694px",
-  left: "-73px",
-};
-
 const WhyChoose: React.FC = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
@@ -70,13 +59,6 @@ const WhyChoose: React.FC = () => {
     <WhyChooseSection>
       <ContentContainer>
         <WhyCooseSkewedInnerContainer>
-          {/* <SvgContainer styles={starsGroupIconStyles}>
-            <img src={starsGroupIcon} alt="Stars Icon" />
-          </SvgContainer>
-
-          <SvgContainer styles={bigDotsGroupIconStyles}>
-            <img src={bigDotsGroupIcon} alt="Dots Icon" />
-          </SvgContainer> */}
           <WhyChooseSectionTitle>Why choose Tinvio?</WhyChooseSectionTitle>
           <Slider {...sliderSettings}>
             {Object.keys(cardsInfo).map((item: Key) => (

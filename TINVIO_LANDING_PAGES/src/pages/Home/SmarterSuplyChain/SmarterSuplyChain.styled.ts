@@ -34,6 +34,16 @@ export const SmarterOptionButton = styled.button<ISmarterOptionButton>`
 
   background: ${theme.colors.background_grey};
   border-radius: 8px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    padding: 11px 34px 12px;
+  }
+`;
+
+export const SmarterDescriptionList = styled.ul`
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    margin: 0px 0px 0px 50px;
+  }
 `;
 
 export const SmarterDescriptionListItem = styled.li`
@@ -45,6 +55,11 @@ export const SmarterDescriptionListItem = styled.li`
   position: relative;
   font-size: ${theme.fontSizes.mobile.sm};
   line-height: 20px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.md};
+    line-height: 23px;
+  }
 
   &::before {
     content: "";
@@ -73,6 +88,11 @@ export const SmarterRedRectangle = styled.div`
   align-items: center;
   width: 395px;
   height: 395px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 508px;
+    height: 508px;
+  }
 `;
 
 export const SmarterRedBgRectangle = styled.div`
@@ -88,6 +108,11 @@ export const SmarterRedBgRectangle = styled.div`
   width: 451px;
   height: 451px;
   margin-top: 57px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 580px;
+    height: 580px;
+  }
 
   &::after {
     content: "";
@@ -109,6 +134,11 @@ export const SmarterRedBgRectangle = styled.div`
     height: 162px;
     left: 552px;
     top: 2px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      left: 711px;
+      top: 90px;
+    }
   }
 `;
 
@@ -119,6 +149,13 @@ export const SmarterPhoneOrdersImageContainer = styled(SvgContainer)`
   right: 52%;
   top: -60px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 330px;
+    height: 563px;
+    right: 190px;
+    top: -115px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -128,6 +165,11 @@ export const SmarterPhoneOrdersImageContainer = styled(SvgContainer)`
     left: 18px;
     top: -96px;
     z-index: -1;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      left: -64px;
+      top: 40px;
+    }
   }
 `;
 
@@ -143,4 +185,11 @@ export const SmarterPhoneChatsImageContainer = styled(SvgContainer)`
   height: 536px;
   left: 24%;
   top: 136px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 330px;
+    height: 563px;
+    left: 187px;
+    top: 157px;
+  }
 `;

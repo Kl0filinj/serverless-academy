@@ -17,9 +17,14 @@ export const SliderCardContainer = styled.div`
   flex-direction: column;
   height: 100%;
   margin: 0 10px 25px;
+  padding-top: 25px;
   background-color: ${theme.colors.white};
   border-radius: 32px;
   min-height: 550px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    padding-top: 36px;
+  }
 `;
 
 export const SliderCardImageContainer = styled.div`
@@ -45,6 +50,11 @@ export const SliderCardText = styled.p`
   /* or 144% */
 
   text-align: start;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.md};
+    line-height: 23px;
+  }
 `;
 
 export const SliderCardLogoIconContainer = styled.div`

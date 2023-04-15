@@ -20,6 +20,10 @@ export const FeaturedSection = styled.section`
     height: 213px;
     top: -86px;
     left: 299px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      left: 522px;
+    }
   }
 `;
 
@@ -38,6 +42,11 @@ export const FeaturedLogoList = styled.ul`
 
   @media screen and (min-width: 475px) {
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 `;
 

@@ -5,8 +5,11 @@ import {
   QuoteEmojiIcon,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
-import smalldotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
-import smarterMedDotsIcon from "@/assets/shared/dots/big_20_dots_group.svg";
+
+import smallDotsIcon from "@/assets/shared/dots/small_12_dots_group.svg";
+import medDotsIcon from "@/assets/shared/dots/med_17_dots_group.svg";
+import bigDotsIcon from "@/assets/shared/dots/big_28_dots_group.svg";
+import heroMedDotsIcon from "@/assets/shared/dots/big_20_dots_group.svg";
 
 export const HeroSection = styled.section`
   position: relative;
@@ -34,10 +37,15 @@ export const HeroRedRectangle = styled.div`
   width: 615px;
   height: 615px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 921px;
+    height: 921px;
+  }
+
   &::after {
     content: "";
     position: absolute;
-    background-image: url(${smalldotsIcon});
+    background-image: url(${smallDotsIcon});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,11 +54,19 @@ export const HeroRedRectangle = styled.div`
     left: 492px;
     top: 36px;
     transform: rotate(45deg);
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      background-image: url(${medDotsIcon});
+      width: 245px;
+      height: 190px;
+      left: 777px;
+      top: 140px;
+    }
   }
   &::before {
     content: "";
     position: absolute;
-    background-image: url(${smarterMedDotsIcon});
+    background-image: url(${heroMedDotsIcon});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,6 +75,14 @@ export const HeroRedRectangle = styled.div`
     left: 358px;
     top: 428px;
     transform: rotate(45deg);
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      background-image: url(${bigDotsIcon});
+      width: 408px;
+      height: 309px;
+      left: 577px;
+      top: 544px;
+    }
   }
 `;
 
@@ -76,6 +100,13 @@ export const HeroRedBgRectangle = styled.div`
   width: 658px;
   height: 669px;
   z-index: -1;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 999px;
+    height: 999px;
+    left: -621px;
+    top: 374px;
+  }
 `;
 
 export const HeroQuoteEmojiIcon = styled(QuoteEmojiIcon)`
@@ -95,6 +126,13 @@ export const PhoneHeroImageContainer = styled(SvgContainer)`
   width: 125px;
   right: 257px;
   top: 490px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 390px;
+    width: 199px;
+    right: 435px;
+    top: 590px;
+  }
 `;
 
 export const PcHeroImageContainer = styled(SvgContainer)`
@@ -102,4 +140,11 @@ export const PcHeroImageContainer = styled(SvgContainer)`
   width: 465px;
   right: -193px;
   top: 372px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 543px;
+    width: 811px;
+    right: -363px;
+    top: 336px;
+  }
 `;

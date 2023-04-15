@@ -1,5 +1,6 @@
 import {
   SkewedInnerContainer,
+  SkewedSection,
   SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 import medDotsGroupIcon from "@/assets/shared/dots/med_14_dots_group.svg";
@@ -12,15 +13,10 @@ interface HowItWorksStaticCardProps {
   mb?: string;
 }
 
-export const HowItWorksSection = styled.section`
-  text-align: center;
-  background: rgb(247, 247, 247);
-  z-index: 1;
-  transform: skewY(-8deg);
-  transform-origin: right bottom;
-  border-radius: 50px 0px 0px 50px;
-  margin: 395px 0px 0px;
-  padding-bottom: 140px;
+export const HowItWorksSection = styled(SkewedSection)`
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    margin: 639px 0px 0px;
+  }
 `;
 
 export const HowItWorksInnerContainer = styled.div`
@@ -47,7 +43,7 @@ export const HowItWorksStaticCard = styled.div<HowItWorksStaticCardProps>`
   height: 67px;
   margin-left: ${(p) => p.ml};
   margin-bottom: ${(p) => p.mb}px;
-  background: #ffffff;
+  background: ${theme.colors.white};
   border-radius: 11.6px;
   box-shadow: rgba(33, 33, 33, 0.1) 4px 7px 20px 0px;
   transform: matrix(0.99, 0.14, -0.14, 0.99, 0, 0);
@@ -58,6 +54,12 @@ export const HowItWorksStaticCard = styled.div<HowItWorksStaticCardProps>`
   align-items: center;
   flex-direction: column;
   padding: 4px 10px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    padding: 10px 24px;
+    width: 252px;
+    height: 101px;
+  }
 `;
 
 export const HowItWorksSeparator = styled.div`
@@ -77,6 +79,11 @@ export const HowItWorksSkewdInnerContainer = styled(SkewedInnerContainer)`
     left: -122px;
     top: 330px;
     z-index: -1;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      background-image: url(${bigDotsGroupIcon});
+      top: 237px;
+    }
   }
 
   &::before {
@@ -91,16 +98,26 @@ export const HowItWorksSkewdInnerContainer = styled(SkewedInnerContainer)`
     left: 240px;
     top: 573px;
     z-index: -1;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      left: 440px;
+      top: 493px;
+    }
   }
 `;
 
-export const HowItWorksCardTitle = styled.h3`
+export const HowItWorksCardTitle = styled.p`
   font-family: "GiloryBold";
   font-size: ${theme.fontSizes.mobile.sm};
   padding: 0px 0px 5px;
   line-height: 18px;
 
   color: ${theme.colors.primary};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: 19px;
+    line-height: 24px;
+  }
 `;
 
 export const HowItWorksCardSubtitle = styled.p`
@@ -109,6 +126,11 @@ export const HowItWorksCardSubtitle = styled.p`
   line-height: 11px;
 
   color: ${theme.colors.secondary};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: 11px;
+    line-height: 13px;
+  }
 `;
 
 export const HowItWorksChatsCardStars = styled(SvgContainer)`
@@ -118,9 +140,21 @@ export const HowItWorksChatsCardStars = styled(SvgContainer)`
   left: 95px;
   top: -32px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 62px;
+    height: 51px;
+    left: 154px;
+    top: -57px;
+  }
+
   & > img {
     width: 33px;
     height: 25px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 62px;
+      height: 51px;
+    }
   }
 `;
 
@@ -129,9 +163,19 @@ export const HowItWorksChatsCardIcon = styled(SvgContainer)`
   left: 135px;
   top: -25px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    left: 212px;
+    top: -31px;
+  }
+
   & > img {
     width: 68px;
     height: 68px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 81px;
+      height: 81px;
+    }
   }
 `;
 
@@ -140,9 +184,19 @@ export const HowItWorksFirstRedArrow = styled(SvgContainer)`
   left: 168px;
   top: 15px;
   z-index: -1;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    left: 257px;
+    top: 32px;
+  }
+
   & > img {
     width: 100px;
     height: 91px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 124px;
+    }
   }
 `;
 
@@ -153,9 +207,21 @@ export const HowItWorksOrdersCardStars = styled(SvgContainer)`
   left: 100px;
   top: -43px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 59px;
+    width: 91px;
+    left: 160px;
+    top: -68px;
+  }
+
   & > img {
     width: 48px;
     height: 26px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      height: 59px;
+      width: 91px;
+    }
   }
 `;
 
@@ -164,9 +230,19 @@ export const HowItWorksOrdersCardIcon = styled(SvgContainer)`
   left: -25px;
   bottom: -42px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    left: -25px;
+    bottom: -42px;
+  }
+
   & > img {
     width: 68px;
     height: 68px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 81px;
+      height: 81px;
+    }
   }
 `;
 
@@ -178,9 +254,20 @@ export const HowItWorksSecondRedArrow = styled(SvgContainer)`
   top: 32px;
   z-index: -1;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 124px;
+    left: -122px;
+    top: 62px;
+  }
+
   & > img {
     width: 100px;
     height: 91px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 124px;
+      height: 85px;
+    }
   }
 `;
 
@@ -191,9 +278,20 @@ export const HowItWorksPaymentsCardStars = styled(SvgContainer)`
   left: 167px;
   top: -9px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 68px;
+    width: 69px;
+    left: 276px;
+  }
+
   & > img {
     width: 29px;
     height: 35px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      height: 68px;
+      width: 69px;
+    }
   }
 `;
 
@@ -204,9 +302,20 @@ export const HowItWorksPaymentsCardSecondStars = styled(SvgContainer)`
   left: 37px;
   top: -44px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 47px;
+    width: 75px;
+    top: -56px;
+  }
+
   & > img {
     width: 30px;
     height: 21px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      height: 47px;
+      width: 75px;
+    }
   }
 `;
 
@@ -218,5 +327,10 @@ export const HowItWorksPaymentsCardIcon = styled(SvgContainer)`
   & > img {
     width: 68px;
     height: 68px;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 81px;
+      height: 81px;
+    }
   }
 `;

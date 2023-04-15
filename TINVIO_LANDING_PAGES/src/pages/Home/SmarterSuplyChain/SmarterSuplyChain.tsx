@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  SmarterDescriptionList,
   SmarterDescriptionListItem,
   SmarterOptionButton,
   SmarterOptionsGroup,
@@ -88,7 +89,7 @@ const SmarterSuplyChain = () => {
           </li>
         </SmarterOptionsGroup>
         <FlexContainer>
-          <ul>
+          <SmarterDescriptionList>
             <SmarterDescriptionListItem>
               <p>{currentOptionsDescription[0]}</p>
             </SmarterDescriptionListItem>
@@ -98,7 +99,7 @@ const SmarterSuplyChain = () => {
             <SmarterDescriptionListItem>
               <p>{currentOptionsDescription[2]}</p>
             </SmarterDescriptionListItem>
-          </ul>
+          </SmarterDescriptionList>
         </FlexContainer>
         <div>
           <AccentLinkButton to="/">More Features</AccentLinkButton>

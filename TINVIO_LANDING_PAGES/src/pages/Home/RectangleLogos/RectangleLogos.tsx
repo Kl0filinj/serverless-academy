@@ -6,7 +6,6 @@ import {
   ReactangleLogosItemBackground,
   ReactangleLogosItemForeground,
   ReactangleLogosItemIcon,
-  ReactangleLogosMultipleItems,
   ReactangleLogosItemCentral,
   ReactangleLogosItemCentralBackground,
   ReactangleLogosItemCentralForeground,
@@ -14,11 +13,14 @@ import {
   ReactangleLogosItemCentralText,
   ReactangleLogosItemCentralSmileIcon,
   ReactangleLogosItemCentralContentContainer,
+  ReactangleLogosOneItem,
+  ReactangleLogosTwoItems,
+  ReactangleLogosSecondTopTwoItems,
+  ReactangleLogosSecondBottomTwoItems,
 } from "./RectangleLogos.styled";
 import {
   ContentContainer,
   SectionTitle,
-  SvgContainer,
 } from "@/components/shared/styles/shearedStyles";
 
 import BBSLogoIcon from "@/assets/Home/shared/rectangleLogos/BBS_logo_icon.svg";
@@ -35,19 +37,47 @@ import TKLogoIcon from "@/assets/Home/shared/rectangleLogos/TK_logo_icon.svg";
 import smileIcon from "@/assets/Home/shared/rectangleLogos/smile_icon.svg";
 
 const RectangleLogos: React.FC = () => {
+  const deviceType: "mobile" | "tablet" | "desktop" = (() => {
+    const pageWidth = document.documentElement.scrollWidth;
+    if (pageWidth < 768 && pageWidth > 1) {
+      return "mobile";
+    }
+    if (pageWidth > 768 && pageWidth < 1024) {
+      return "tablet";
+    }
+    if (pageWidth > 1024 && pageWidth < 1920) {
+      return "desktop";
+    }
+    return "desktop";
+  })();
+
+  const secondTwoItemsStyles =
+    deviceType === "mobile"
+      ? { margin: "0px 151px 0px 0px" }
+      : deviceType === "tablet"
+      ? { margin: "0px 428px 0px 0px" }
+      : { margin: "119px 0px 0px" };
+
+  const firstTwoItemsStyles =
+    deviceType === "mobile"
+      ? { margin: "0px 19px 0px 0px" }
+      : deviceType === "tablet"
+      ? { margin: "0px 143px 0px 0px" }
+      : { margin: "119px 0px 0px" };
+
   return (
     <ReactangleLogosSection>
       <ContentContainer>
         <SectionTitle>We`ll put a smile on your supply chain </SectionTitle>
         <ReactangleLogosContainer>
-          <ReactangleLogosItem>
+          <ReactangleLogosOneItem>
             <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
             <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
             <ReactangleLogosItemIcon src={PetShopLogoIcon} alt="Logo Icon" />
-          </ReactangleLogosItem>
+          </ReactangleLogosOneItem>
           {/* First Row */}
-          <ReactangleLogosMultipleItems styles={{ margin: "-46px 0px 0px" }}>
-            <ReactangleLogosItem styles={{ margin: "0px 19px 0px 0px" }}>
+          <ReactangleLogosTwoItems styles={{ margin: "-46px 0px 0px" }}>
+            <ReactangleLogosItem styles={firstTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={NexLogoIcon} alt="Logo Icon" />
@@ -57,10 +87,12 @@ const RectangleLogos: React.FC = () => {
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={BBSLogoIcon} alt="Logo Icon" />
             </ReactangleLogosItem>
-          </ReactangleLogosMultipleItems>
+          </ReactangleLogosTwoItems>
           {/* Second Row With 2 Items */}
-          <ReactangleLogosMultipleItems styles={{ margin: "-39px 0px 0px" }}>
-            <ReactangleLogosItem styles={{ margin: "0px 151px 0px 0px" }}>
+          <ReactangleLogosSecondTopTwoItems
+            styles={{ margin: "-39px 0px 0px" }}
+          >
+            <ReactangleLogosItem styles={secondTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={NaylaLogoIcon} alt="Logo Icon" />
@@ -70,7 +102,7 @@ const RectangleLogos: React.FC = () => {
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={TKLogoIcon} alt="Logo Icon" />
             </ReactangleLogosItem>
-          </ReactangleLogosMultipleItems>
+          </ReactangleLogosSecondTopTwoItems>
           {/* Third Row With 2 Items */}
           {/* Central Red Rectangle Starts */}
           <ReactangleLogosItemCentral>
@@ -100,8 +132,10 @@ const RectangleLogos: React.FC = () => {
             </ReactangleLogosItemCentralBackground>
           </ReactangleLogosItemCentral>
           {/* Central Red Rectangle Ends */}
-          <ReactangleLogosMultipleItems styles={{ margin: "-96px 0px 0px" }}>
-            <ReactangleLogosItem styles={{ margin: "0px 151px 0px 0px" }}>
+          <ReactangleLogosSecondBottomTwoItems
+            styles={{ margin: "-96px 0px 0px" }}
+          >
+            <ReactangleLogosItem styles={secondTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon
@@ -117,10 +151,10 @@ const RectangleLogos: React.FC = () => {
                 alt="Logo Icon"
               />
             </ReactangleLogosItem>
-          </ReactangleLogosMultipleItems>
+          </ReactangleLogosSecondBottomTwoItems>
           {/* Third From End Row With 2 Items */}
-          <ReactangleLogosMultipleItems styles={{ margin: "-39px 0px 0px" }}>
-            <ReactangleLogosItem styles={{ margin: "0px 19px 0px 0px" }}>
+          <ReactangleLogosTwoItems styles={{ margin: "-39px 0px 0px" }}>
+            <ReactangleLogosItem styles={firstTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={EstehLogoIcon} alt="Logo Icon" />
@@ -130,19 +164,14 @@ const RectangleLogos: React.FC = () => {
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={GongchaLogoIcon} alt="Logo Icon" />
             </ReactangleLogosItem>
-          </ReactangleLogosMultipleItems>
+          </ReactangleLogosTwoItems>
           {/* Second From End Row With 2 Items */}
-          <ReactangleLogosItem styles={{ margin: "-46px 0px 0px" }}>
+          <ReactangleLogosOneItem styles={{ margin: "-46px 0px 0px" }}>
             <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
             <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
             <ReactangleLogosItemIcon src={KhopakaLogoIcon} alt="Logo Icon" />
-          </ReactangleLogosItem>
+          </ReactangleLogosOneItem>
           {/* First From End Row */}
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
         </ReactangleLogosContainer>
       </ContentContainer>
     </ReactangleLogosSection>

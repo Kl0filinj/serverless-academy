@@ -12,6 +12,7 @@ import {
   HowItWorksPaymentsCardSecondStars,
   HowItWorksPaymentsCardStars,
   HowItWorksSecondRedArrow,
+  HowItWorksSection,
   HowItWorksSeparator,
   HowItWorksSkewdInnerContainer,
   HowItWorksStaticCard,
@@ -22,7 +23,6 @@ import {
   ContentContainer,
   SectionSubtitle,
   SectionTitle,
-  SkewedSection,
 } from "@/components/shared/styles/shearedStyles";
 
 import playIcon from "@/assets/Home/shared/howItworks/play_icon.svg";
@@ -38,7 +38,7 @@ import secondRedArrowCardIcon from "@/assets/Home/shared/howItworks/second_step_
 
 const HowItWorks: React.FC = () => {
   return (
-    <SkewedSection>
+    <HowItWorksSection>
       <ContentContainer>
         <HowItWorksSkewdInnerContainer>
           <HowItWorksContentContainer>
@@ -132,7 +132,7 @@ const HowItWorks: React.FC = () => {
           </HowItWorksContentContainer>
         </HowItWorksSkewdInnerContainer>
       </ContentContainer>
-    </SkewedSection>
+    </HowItWorksSection>
   );
 };
 

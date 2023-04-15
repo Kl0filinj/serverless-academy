@@ -11,6 +11,7 @@ import {
   FooterPrivacyInfo,
   FooterPrivacyLink,
   FooterPrivacyTermsContainer,
+  FooterLogoNavContainer,
 } from "./Footer.styled";
 
 import logo from "@/assets/shared/header/tinvio_logo.svg";
@@ -25,20 +26,22 @@ const Footer: React.FC = () => {
       <ContentContainer>
         <FooterContainer>
           <div>
-            <div>
-              <img src={logo} alt="Logo" />
-            </div>
-            <FooterNav>
-              <li>
-                <FooterNavLinks to="/">Home</FooterNavLinks>
-              </li>
-              <li>
-                <FooterNavLinks to="/feature">Features</FooterNavLinks>
-              </li>
-              <li>
-                <FooterNavLinks to="/company">Company</FooterNavLinks>
-              </li>
-            </FooterNav>
+            <FooterLogoNavContainer>
+              <div>
+                <img src={logo} alt="Logo" />
+              </div>
+              <FooterNav>
+                <li>
+                  <FooterNavLinks to="/">Home</FooterNavLinks>
+                </li>
+                <li>
+                  <FooterNavLinks to="/feature">Features</FooterNavLinks>
+                </li>
+                <li>
+                  <FooterNavLinks to="/company">Company</FooterNavLinks>
+                </li>
+              </FooterNav>
+            </FooterLogoNavContainer>
           </div>
           <div>
             <FooterSocContainer>

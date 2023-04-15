@@ -1,6 +1,7 @@
 import { theme } from "@/theme";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { FlexContainer } from "../shared/styles/shearedStyles";
 
 export const FooterS = styled.footer`
   padding: 40px 66px 8px;
@@ -16,12 +17,17 @@ export const FooterContainer = styled.div`
 export const FooterNavLinks = styled(NavLink)`
   font-family: "GiloryRegular";
   font-weight: 400;
-  font-size: ${theme.fontSizes.small_mb};
+  font-size: ${theme.fontSizes.mobile.sm};
   line-height: 1.9;
 
   text-align: center;
 
   color: ${theme.colors.primary};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.md};
+    line-height: 27px;
+  }
 `;
 
 export const FooterNav = styled.ul`
@@ -30,12 +36,24 @@ export const FooterNav = styled.ul`
   flex-direction: column;
   margin: 0px 0px 48px;
   gap: 16px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    flex-direction: row;
+    gap: 56px;
+    margin-bottom: 32px;
+  }
 `;
 
-export const FooterSocContainer = styled.div`
-  display: flex;
-  align-items: center;
+export const FooterLogoNavContainer = styled(FlexContainer)`
   flex-direction: column;
+`;
+
+export const FooterSocContainer = styled(FlexContainer)`
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 32px;
+  }
 `;
 
 export const FooterSocInnerContainer = styled.div`
@@ -45,11 +63,13 @@ export const FooterSocInnerContainer = styled.div`
   gap: 16px;
 `;
 
-export const FooterPrivacyInfoContainer = styled.div`
-  display: flex;
+export const FooterPrivacyInfoContainer = styled(FlexContainer)`
   flex-direction: column;
-  align-items: center;
   gap: 8px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    flex-direction: row;
+  }
 `;
 
 export const FooterPrivacyInfo = styled.p`

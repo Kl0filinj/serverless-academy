@@ -32,10 +32,12 @@ export const SectionTitle = styled.h2`
   font-size: ${theme.fontSizes.mobile.lg};
   line-height: 33px;
 
-  /* display: flex;
-  align-items: center; */
-
   color: ${theme.colors.primary};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.xl};
+    line-height: 39px;
+  }
 `;
 
 export const SectionSubtitle = styled.p`

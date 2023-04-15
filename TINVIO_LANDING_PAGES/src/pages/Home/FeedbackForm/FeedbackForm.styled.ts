@@ -1,4 +1,8 @@
-import { AccentButton } from "@/components/shared/styles/shearedStyles";
+import {
+  AccentButton,
+  ContentContainer,
+  SvgContainer,
+} from "@/components/shared/styles/shearedStyles";
 import { theme } from "@/theme";
 import styled from "styled-components";
 
@@ -9,6 +13,32 @@ interface FeedbackPanelFormLabelProps {
 export const FeedbackSection = styled.section`
   position: relative;
   margin-bottom: 438px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    transform: skewY(8deg);
+    background-color: #f7f7f7;
+    padding-bottom: 501px;
+    margin-bottom: 80px;
+    border-radius: 0px 50px 0px 0px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -75px;
+      left: 0px;
+      width: 100vw;
+      height: 150px;
+      transform: skewY(-8deg);
+      background-color: #f7f7f7;
+    }
+  }
+`;
+
+export const FeedbackContentContainer = styled(ContentContainer)`
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    transform: skewY(-8deg);
+    margin-top: 95px;
+  }
 `;
 
 export const FeedbackPanel = styled.div`
@@ -24,12 +54,20 @@ export const FeedbackPanel = styled.div`
   padding: 16px;
   position: relative;
   z-index: 2;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    padding: 32px;
+  }
 `;
 
 export const FeedbackPanelForm = styled.form`
   background-color: ${theme.colors.white};
   border-radius: 32px;
   padding: 40px 24px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    padding: 48px 48px 40px;
+  }
 `;
 
 export const FeedbackPanelFormCapture = styled.p`
@@ -41,6 +79,11 @@ export const FeedbackPanelFormCapture = styled.p`
   margin: 0px 0px 32px;
   text-align: center;
   max-width: 295px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: ${theme.fontSizes.tablet.lg};
+    line-height: 29px;
+  }
 `;
 
 export const FeedbackPanelFormLabel = styled.label<FeedbackPanelFormLabelProps>`
@@ -63,15 +106,32 @@ export const FeedbackPanelFormInput = styled.input`
   padding: 11px 16px;
   font-family: "InterRegular";
   font-weight: 400;
-  font-size: ${theme.fontSizes.small_mb};
+  font-size: ${theme.fontSizes.mobile.sm};
   line-height: 17px;
   color: ${theme.colors.primary};
   outline: none;
   margin: 8px 0px 0px;
   width: 295px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 329px;
+  }
 `;
 
 export const FeedbackPanelFormSubmitBtn = styled(AccentButton)`
   padding: 14px 63px;
   margin: 0px auto 14px;
+`;
+
+export const FeedbakcDotsMapImageContainer = styled(SvgContainer)`
+  left: -103px;
+  width: 559px;
+  height: 386px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    transform: skew(-8deg) rotate(-8deg);
+    width: 699px;
+    height: 501px;
+    left: -69px;
+  }
 `;

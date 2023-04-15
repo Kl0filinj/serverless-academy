@@ -21,6 +21,13 @@ export const ReactangleLogosSection = styled.section`
     top: -67px;
     left: 281px;
     z-index: -1;
+
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      width: 240px;
+      height: 184px;
+      top: -67px;
+      left: 531px;
+    }
   }
 `;
 
@@ -40,11 +47,29 @@ export const ReactangleLogosItem = styled.div<ReactangleLogosItemProps>`
   justify-content: center;
   position: relative;
   ${(p) => p.styles}
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 156px;
+    height: 156px;
+  }
 `;
 
 export const ReactangleLogosMultipleItems = styled.div<ReactangleLogosItemProps>`
   display: flex;
   ${(p) => p.styles}
+`;
+
+export const ReactangleLogosOneItem = styled(ReactangleLogosItem)``;
+export const ReactangleLogosTwoItems = styled(ReactangleLogosMultipleItems)``;
+export const ReactangleLogosSecondTopTwoItems = styled(
+  ReactangleLogosMultipleItems
+)``;
+export const ReactangleLogosSecondBottomTwoItems = styled(
+  ReactangleLogosSecondTopTwoItems
+)`
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    margin: -214px 0px 0px;
+  }
 `;
 
 export const ReactangleLogosItemBackground = styled.div`
@@ -63,6 +88,12 @@ export const ReactangleLogosItemBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 111px;
+    height: 108px;
+    border-radius: 14.8359px;
+  }
 `;
 
 export const ReactangleLogosItemForeground = styled.div`
@@ -78,6 +109,12 @@ export const ReactangleLogosItemForeground = styled.div`
     rgba(250, 250, 250, 0.8) 100%
   );
   border-radius: 5px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 83px;
+    height: 83px;
+    border-radius: 11.9999px;
+  }
 `;
 
 export const ReactangleLogosItemIcon = styled.img`
@@ -85,6 +122,10 @@ export const ReactangleLogosItemIcon = styled.img`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5638);
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
 `;
 
 export const ReactangleLogosItemCentral = styled.div`
@@ -96,6 +137,12 @@ export const ReactangleLogosItemCentral = styled.div`
   margin: -96px 0px 0px;
   transform: rotate(45deg);
   position: relative;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 491px;
+    height: 491px;
+    margin: -226px 0px 0px;
+  }
 `;
 
 const pulseAnimation = keyframes`
@@ -119,6 +166,12 @@ export const ReactangleLogosItemCentralBackground = styled.div`
   background: rgba(251, 36, 43, 0.4);
   border-radius: 17.7451px;
 
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 308px;
+    height: 308px;
+    border-radius: 25.3502px;
+  }
+
   &::after,
   &::before {
     content: "";
@@ -132,11 +185,11 @@ export const ReactangleLogosItemCentralBackground = styled.div`
     border-radius: 17.7451px;
     animation: 2.25s cubic-bezier(0.215, 0.61, 0.355, 1) 0s infinite normal none
       running ${pulseAnimation};
-  }
 
-  /* &::after {
-    animation-delay: 1s;
-  } */
+    @media screen and (min-width: ${theme.breakPoints.sm}) {
+      border-width: 70px;
+    }
+  }
 `;
 
 export const ReactangleLogosItemCentralFlexContainer = styled.div`
@@ -154,6 +207,12 @@ export const ReactangleLogosItemCentralForeground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    width: 259px;
+    height: 259px;
+    border-radius: 25.3502px;
+  }
 `;
 
 export const ReactangleLogosItemCentralContentContainer = styled.div`
@@ -170,8 +229,17 @@ export const ReactangleLogosItemCentralText = styled.p`
   font-size: 20.2659px;
   line-height: 25px;
   color: ${theme.colors.white};
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    font-size: 28px;
+    line-height: 34px;
+  }
 `;
 
 export const ReactangleLogosItemCentralSmileIcon = styled.div`
   margin-top: 13px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    margin-top: 17px;
+  }
 `;

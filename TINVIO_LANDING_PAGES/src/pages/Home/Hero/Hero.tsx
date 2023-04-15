@@ -7,7 +7,6 @@ import {
   HeroSection,
   PcHeroImageContainer,
   PhoneHeroImageContainer,
-  SmallDotsGroupIconStyles,
 } from "./HeroHome.styled";
 import {
   AccentButton,
@@ -75,12 +74,7 @@ const Hero: React.FC = () => {
               media="(min-width: 1200px)"
               type="image/png"
             /> */}
-            <img
-              src={mobile_phoneHeroImage1x}
-              alt="Phone Image"
-              // width="450"
-              // height="460"
-            />
+            <img src={mobile_phoneHeroImage1x} alt="Phone Image" />
           </picture>
         </PhoneHeroImageContainer>
         <PcHeroImageContainer>
@@ -100,25 +94,11 @@ const Hero: React.FC = () => {
               media="(min-width: 1200px)"
               type="image/png"
             /> */}
-            <img
-              src={mobile_pcHeroImage1x}
-              alt="PC Image"
-              width="100%"
-
-              // width="450"
-              // height="460"
-            />
+            <img src={mobile_pcHeroImage1x} alt="PC Image" width="100%" />
           </picture>
         </PcHeroImageContainer>
         <HeroRedBgRectangle>
-          <HeroRedRectangle>
-            {/* <SvgContainer styles={smallDotsGroupIconStyles}>
-              <img src={smalldotsIcon} alt="Dots Icon" />
-            </SvgContainer> */}
-            {/* <SvgContainer styles={bigDotsGroupIconStyles}>
-              <img src={smarterMedDotsIconStyles} alt="Dots Icon" />
-            </SvgContainer> */}
-          </HeroRedRectangle>
+          <HeroRedRectangle></HeroRedRectangle>
         </HeroRedBgRectangle>
       </ContentContainer>
     </HeroSection>

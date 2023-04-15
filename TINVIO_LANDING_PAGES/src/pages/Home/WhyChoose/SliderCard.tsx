@@ -67,9 +67,11 @@ const SliderCard: React.FC<SliderCardProps> = ({
           <img src={mainImage.mobile.x1} alt="Image" />
         </picture>
       </SliderCardImage>
-      <SliderCardTextContainer>
-        <SliderCardText>{descriptionText}</SliderCardText>
-      </SliderCardTextContainer>
+      <div>
+        <SliderCardTextContainer>
+          <SliderCardText>{descriptionText}</SliderCardText>
+        </SliderCardTextContainer>
+      </div>
       <SliderCardLogoIconContainer>
         <img src={companyLogoImage} alt="Company Logo" />
         <SvgContainer styles={quotesIconStyles}>
