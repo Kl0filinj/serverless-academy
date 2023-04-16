@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  HeroContentContainer,
   HeroHomeTitle,
   HeroQuoteEmojiIcon,
   HeroRedBgRectangle,
@@ -10,7 +11,6 @@ import {
 } from "./HeroHome.styled";
 import {
   AccentButton,
-  ContentContainer,
   QuoteWithEmoji,
   SectionSubtitle,
   SvgContainer,
@@ -23,10 +23,14 @@ import mobile_phoneHeroImage1x from "@/assets/Home/mobile/hero/hero_phone_x1.png
 import mobile_phoneHeroImage2x from "@/assets/Home/mobile/hero/hero_phone_x2.png";
 import tablet_phoneHeroImage1x from "@/assets/Home/tablet/hero/hero_phone_x1.png";
 import tablet_phoneHeroImage2x from "@/assets/Home/tablet/hero/hero_phone_x2.png";
+import desktop_phoneHeroImage1x from "@/assets/Home/desktop/hero/hero_phone_x1.png";
+import desktop_phoneHeroImage2x from "@/assets/Home/desktop/hero/hero_phone_x2.png";
 import mobile_pcHeroImage1x from "@/assets/Home/mobile/hero/hero_pc_x1.png";
 import mobile_pcHeroImage2x from "@/assets/Home/mobile/hero/hero_pc_x2.png";
 import tablet_pcHeroImage1x from "@/assets/Home/tablet/hero/hero_pc_x1.png";
 import tablet_pcHeroImage2x from "@/assets/Home/tablet/hero/hero_pc_x2.png";
+import desktop_pcHeroImage1x from "@/assets/Home/desktop/hero/hero_pc_x1.png";
+import desktop_pcHeroImage2x from "@/assets/Home/desktop/hero/hero_pc_x2.png";
 
 const heroStarsGroupIconStyles = {
   height: "41px",
@@ -38,7 +42,7 @@ const heroStarsGroupIconStyles = {
 const Hero: React.FC = () => {
   return (
     <HeroSection>
-      <ContentContainer>
+      <HeroContentContainer>
         <HeroHomeTitle>
           Collecting payments is easy, right?
           <SvgContainer style={heroStarsGroupIconStyles}>
@@ -50,13 +54,15 @@ const Hero: React.FC = () => {
           Manage all your supply chain transactions in one dashboard. Get paid
           faster, reconcile quicker, grow bigger.
         </SectionSubtitle>
-        <AccentButton>Get Started Now</AccentButton>
-        <QuoteWithEmoji>
-          It's free to try!
-          <HeroQuoteEmojiIcon>
-            <img src={smileEmojiIcon} alt="Smile Emoji Icon" />
-          </HeroQuoteEmojiIcon>
-        </QuoteWithEmoji>
+        <div>
+          <AccentButton>Get Started Now</AccentButton>
+          <QuoteWithEmoji>
+            It's free to try!
+            <HeroQuoteEmojiIcon>
+              <img src={smileEmojiIcon} alt="Smile Emoji Icon" />
+            </HeroQuoteEmojiIcon>
+          </QuoteWithEmoji>
+        </div>
         <PhoneHeroImageContainer>
           <picture>
             <source
@@ -69,11 +75,11 @@ const Hero: React.FC = () => {
               media="(min-width: 768px)"
               type="image/png"
             />
-            {/* <source
-              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
-              media="(min-width: 1200px)"
+            <source
+              srcSet={`${desktop_phoneHeroImage1x} 1x, ${desktop_phoneHeroImage2x} 2x`}
+              media="(min-width: 1024px)"
               type="image/png"
-            /> */}
+            />
             <img src={mobile_phoneHeroImage1x} alt="Phone Image" />
           </picture>
         </PhoneHeroImageContainer>
@@ -89,18 +95,18 @@ const Hero: React.FC = () => {
               media="(min-width: 768px)"
               type="image/png"
             />
-            {/* <source
-              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
-              media="(min-width: 1200px)"
+            <source
+              srcSet={`${desktop_pcHeroImage1x} 1x, ${desktop_pcHeroImage2x} 2x`}
+              media="(min-width: 1024px)"
               type="image/png"
-            /> */}
+            />
             <img src={mobile_pcHeroImage1x} alt="PC Image" width="100%" />
           </picture>
         </PcHeroImageContainer>
         <HeroRedBgRectangle>
           <HeroRedRectangle></HeroRedRectangle>
         </HeroRedBgRectangle>
-      </ContentContainer>
+      </HeroContentContainer>
     </HeroSection>
   );
 };

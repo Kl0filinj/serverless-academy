@@ -1,4 +1,5 @@
 import {
+  FlexContainer,
   SkewedInnerContainer,
   SkewedSection,
   SvgContainer,
@@ -17,6 +18,10 @@ export const HowItWorksSection = styled(SkewedSection)`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     margin: 639px 0px 0px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    margin: 248px 0px 0px;
+  }
 `;
 
 export const HowItWorksInnerContainer = styled.div`
@@ -28,10 +33,14 @@ export const HowItWorksInnerContainer = styled.div`
   position: relative;
 `;
 
-export const HowItWorksContentContainer = styled.div`
-  display: flex;
-  justify-content: center;
+export const HowItWorksContentContainer = styled(FlexContainer)`
   flex-direction: column;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 `;
 
 export const PlayIcon = styled.span`
@@ -64,6 +73,9 @@ export const HowItWorksStaticCard = styled.div<HowItWorksStaticCardProps>`
 
 export const HowItWorksSeparator = styled.div`
   margin-top: 100px;
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    order: -1;
+  }
 `;
 
 export const HowItWorksSkewdInnerContainer = styled(SkewedInnerContainer)`

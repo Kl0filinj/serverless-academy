@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@/theme";
 import {
+  ContentContainer,
   HeroTitle,
   QuoteEmojiIcon,
   SvgContainer,
@@ -22,6 +23,11 @@ export const HeroSection = styled.section`
     max-width: calc(${theme.containerWidth.sm} + 42px);
     margin-top: 92px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    max-width: calc(${theme.containerWidth.md} + 42px);
+    margin-top: 257px;
+  }
 `;
 
 export const HeroHomeTitle = styled(HeroTitle)`
@@ -40,6 +46,14 @@ export const HeroRedRectangle = styled.div`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     width: 921px;
     height: 921px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 964px;
+    height: 964px;
+    left: 577px;
+    top: 544px;
+    border-radius: 125.316px;
   }
 
   &::after {
@@ -62,6 +76,14 @@ export const HeroRedRectangle = styled.div`
       left: 777px;
       top: 140px;
     }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      background-image: url(${smallDotsIcon});
+      width: 176px;
+      height: 146px;
+      left: 241px;
+      top: 41px;
+    }
   }
   &::before {
     content: "";
@@ -82,6 +104,14 @@ export const HeroRedRectangle = styled.div`
       height: 309px;
       left: 577px;
       top: 544px;
+    }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      background-image: url(${heroMedDotsIcon});
+      width: 328px;
+      height: 248px;
+      left: 159px;
+      top: 428px;
     }
   }
 `;
@@ -106,6 +136,14 @@ export const HeroRedBgRectangle = styled.div`
     height: 999px;
     left: -621px;
     top: 374px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 1031px;
+    height: 1049px;
+    left: 521px;
+    top: -204px;
+    border-radius: 136.463px;
   }
 `;
 
@@ -133,6 +171,13 @@ export const PhoneHeroImageContainer = styled(SvgContainer)`
     right: 435px;
     top: 590px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 372px;
+    width: 190px;
+    right: 381px;
+    top: 150px;
+  }
 `;
 
 export const PcHeroImageContainer = styled(SvgContainer)`
@@ -146,5 +191,20 @@ export const PcHeroImageContainer = styled(SvgContainer)`
     width: 811px;
     right: -363px;
     top: 336px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    height: 517px;
+    width: 772px;
+    right: -392px;
+    top: -74px;
+  }
+`;
+
+export const HeroContentContainer = styled(ContentContainer)`
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;

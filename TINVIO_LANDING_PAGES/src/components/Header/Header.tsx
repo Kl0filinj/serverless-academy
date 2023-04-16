@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BurgerMenuBtn,
-  HeaderInnerContainer,
   HeaderNav,
   HeaderNavList,
   HeaderS,
@@ -9,18 +8,17 @@ import {
   HeaderNavLinks,
   HeaderContentContainer,
   HeaderAddictionInfo,
-  BurgerMenuDotsIcon,
+  HeaderInnerContainer,
+  HeaderSocContainer,
+  HeaderAccentButton,
 } from "./Header.styled";
-import { AccentButton, SvgContainer } from "../shared/styles/shearedStyles";
+import { AccentButton } from "../shared/styles/shearedStyles";
 
 import logo from "@/assets/shared/header/tinvio_logo.svg";
 import burgerMenuIcon from "@/assets/shared/header/burger_menu_btn.svg";
 import crossBurgerMenuIcon from "@/assets/shared/header/cross_burger_icon.svg";
 
-import {
-  FooterSocContainer,
-  FooterSocInnerContainer,
-} from "../Footer/Footer.styled";
+import { FooterSocInnerContainer } from "../Footer/Footer.styled";
 
 import linkedinIcon from "@/assets/shared/footer/linkedin_footer_icon.svg";
 import instagramIcon from "@/assets/shared/footer/instagram_footer_icon.svg";
@@ -29,13 +27,20 @@ import appStoreIcon from "@/assets/shared/footer/app_store_footer_icon.svg";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      setIsScrolled(window.pageYOffset > 20);
+    };
+  }, []);
 
   const handleMenuToggle = (): void => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
   return (
-    <HeaderS>
+    <HeaderS isScrolled={isScrolled}>
       <HeaderContentContainer>
         <HeaderInnerContainer>
           <div>
@@ -49,11 +54,6 @@ const Header: React.FC = () => {
             )}
           </BurgerMenuBtn>
           <HeaderNavContainer isMenuOpen={isMenuOpen}>
-            {/* {isMenuOpen && (
-              <BurgerMenuDotsIcon>
-                <img src={medDotsGroupIcon} alt="Dots Icon" />
-              </BurgerMenuDotsIcon>
-            )} */}
             <HeaderNav>
               <HeaderNavList>
                 <li>
@@ -69,9 +69,11 @@ const Header: React.FC = () => {
             </HeaderNav>
             <HeaderAddictionInfo>
               <div>
-                <AccentButton>Get Started</AccentButton>
+                <HeaderAccentButton isScrolled={isScrolled}>
+                  Get Started
+                </HeaderAccentButton>
               </div>
-              <FooterSocContainer>
+              <HeaderSocContainer>
                 <FooterSocInnerContainer>
                   <div>
                     <img src={linkedinIcon} alt="Linkedin Icon" />
@@ -88,7 +90,7 @@ const Header: React.FC = () => {
                     <img src={appStoreIcon} alt="App Store Icon" />
                   </div>
                 </FooterSocInnerContainer>
-              </FooterSocContainer>
+              </HeaderSocContainer>
             </HeaderAddictionInfo>
           </HeaderNavContainer>
         </HeaderInnerContainer>

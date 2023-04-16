@@ -1,15 +1,25 @@
 import { theme } from "@/theme";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { ContentContainer, SvgContainer } from "../shared/styles/shearedStyles";
+import {
+  AccentButton,
+  ContentContainer,
+  FlexContainer,
+  SvgContainer,
+} from "../shared/styles/shearedStyles";
 import medDotsGroupIcon from "@/assets/shared/dots/med_17_dots_group.svg";
 import bigDotsGroupIcon from "@/assets/shared/dots/big_25_dots_group.svg";
+import { FooterSocContainer } from "../Footer/Footer.styled";
 
 interface HeaderNavContainerProps {
   isMenuOpen?: boolean;
 }
 
-export const HeaderS = styled.header`
+interface HeaderScrolledElementsProps {
+  isScrolled?: boolean;
+}
+
+export const HeaderS = styled.header<HeaderScrolledElementsProps>`
   padding: 24px 21px;
   margin: 0 auto;
   position: fixed;
@@ -17,14 +27,15 @@ export const HeaderS = styled.header`
   left: 0px;
   width: 100%;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(24px);
+  background-color: ${(p) =>
+    p.isScrolled ? "rgba(255, 255, 255, 0.9)" : "transparent"};
+  backdrop-filter: ${(p) => (p.isScrolled ? "blur(24px)" : "none")};
+  transition: background-color 250ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    filter 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
 `;
 
-export const HeaderInnerContainer = styled.div`
-  display: flex;
+export const HeaderInnerContainer = styled(FlexContainer)`
   justify-content: space-between;
-  align-items: center;
 `;
 
 export const BurgerMenuBtn = styled.button`
@@ -33,11 +44,19 @@ export const BurgerMenuBtn = styled.button`
   font: inherit;
   color: inherit;
   background-color: transparent;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    display: none;
+  }
 `;
 
 export const HeaderNav = styled.nav`
   margin: 231px 0px 0px;
   position: relative;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    margin: 0;
+  }
 `;
 
 export const HeaderNavList = styled.ul`
@@ -48,6 +67,10 @@ export const HeaderNavList = styled.ul`
   gap: 48px;
   color: ${theme.colors.primary};
   padding: 0px;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: row;
+  }
 `;
 
 export const HeaderAddictionInfo = styled.div`
@@ -81,6 +104,23 @@ export const HeaderNavContainer = styled.div<HeaderNavContainerProps>`
     flex-direction: column;
   }
 
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: none;
+    margin: 0;
+    overflow-y: auto;
+    padding: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    max-width: 65%;
+    width: 100%;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -96,6 +136,10 @@ export const HeaderNavContainer = styled.div<HeaderNavContainerProps>`
       height: 273px;
       bottom: 276px;
       right: -137px;
+    }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      display: none;
     }
   }
 `;
@@ -117,9 +161,32 @@ export const HeaderContentContainer = styled(ContentContainer)`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     max-width: ${theme.breakPoints.sm};
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    max-width: ${theme.breakPoints.md};
+  }
 `;
 
 export const BurgerMenuDotsIcon = styled(SvgContainer)`
   bottom: 98px;
   right: -60px;
+`;
+
+export const HeaderSocContainer = styled(FooterSocContainer)`
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    display: none;
+  }
+`;
+
+export const HeaderAccentButton = styled(
+  AccentButton
+)<HeaderScrolledElementsProps>`
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    margin: 0;
+
+    background-color: ${(p) => (p.isScrolled ? "" : `${theme.colors.white}`)};
+    color: ${(p) => (p.isScrolled ? "" : `${theme.colors.primary}`)};
+    transition: background-color 250ms cubic-bezier(0.215, 0.61, 0.355, 1),
+      color 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 `;

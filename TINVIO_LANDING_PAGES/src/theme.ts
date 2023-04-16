@@ -30,6 +30,14 @@ export interface ITheme {
       md: string;
       xs: string;
     };
+    desktop: {
+      xl: string;
+      lg: string;
+      sm: string;
+      md: string;
+      xs: string;
+      "2xs": string;
+    };
   };
   fontWeight: {
     medium: number;
@@ -43,7 +51,7 @@ export interface ITheme {
     md: string;
     lg: string;
     xl: string;
-    xl2: string;
+    "2xl": string;
   };
   containerWidth: {
     xs: string;
@@ -51,7 +59,7 @@ export interface ITheme {
     md: string;
     lg: string;
     xl: string;
-    xl2: string;
+    "2xl": string;
   };
 }
 
@@ -80,6 +88,14 @@ export const theme: ITheme = {
       sm: "14px",
       xs: "12px",
     },
+    desktop: {
+      xl: "44px",
+      lg: "36px",
+      md: "32px",
+      sm: "20px",
+      xs: "18px",
+      "2xs": "16px",
+    },
   },
   fontWeight: {
     medium: 500,
@@ -93,15 +109,15 @@ export const theme: ITheme = {
     md: "1024px",
     lg: "1280px",
     xl: "1440px",
-    xl2: "1920px",
+    "2xl": "1920px",
   },
   containerWidth: {
     xs: "375px",
     sm: "490px",
-    md: "",
+    md: "950px",
     lg: "",
     xl: "",
-    xl2: "",
+    "2xl": "",
   },
 };
 

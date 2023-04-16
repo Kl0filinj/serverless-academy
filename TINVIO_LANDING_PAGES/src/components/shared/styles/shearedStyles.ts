@@ -25,6 +25,14 @@ export const HeroTitle = styled.h1`
     margin: 0px auto 16px;
     max-width: 333px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    font-size: ${theme.fontSizes.desktop.md};
+    text-align: start;
+    line-height: 49px;
+    margin: 0px 0px 16px;
+    /* max-width: 333px; */
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -53,6 +61,15 @@ export const SectionSubtitle = styled.p`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     font-size: ${theme.fontSizes.tablet.md};
     line-height: 24px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    font-size: ${theme.fontSizes.desktop["2xs"]};
+    line-height: 24px;
+    /* max-width: 334px; */
+    text-align: start;
+    margin: 0px;
+    max-width: 334px;
   }
 `;
 
@@ -107,6 +124,10 @@ export const ContentContainer = styled.div`
   margin: 0 auto;
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     max-width: 490px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    max-width: 950px;
   }
 `;
 

@@ -121,7 +121,7 @@ const SmarterSuplyChain = () => {
                 />
                 {/* <source
               srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
-              media="(min-width: 1200px)"
+              media="(min-width: 1024px)"
               type="image/png"
             /> */}
                 <img
@@ -145,7 +145,7 @@ const SmarterSuplyChain = () => {
                 />
                 {/* <source
               srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
-              media="(min-width: 1200px)"
+              media="(min-width: 1024px)"
               type="image/png"
             /> */}
                 <img
