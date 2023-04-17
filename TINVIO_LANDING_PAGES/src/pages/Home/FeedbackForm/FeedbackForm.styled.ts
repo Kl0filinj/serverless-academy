@@ -32,12 +32,24 @@ export const FeedbackSection = styled.section`
       background-color: #f7f7f7;
     }
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    padding-bottom: 180px;
+  }
 `;
 
 export const FeedbackContentContainer = styled(ContentContainer)`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     transform: skewY(-8deg);
     margin-top: 95px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+    margin-top: 127px;
   }
 `;
 
@@ -133,5 +145,12 @@ export const FeedbakcDotsMapImageContainer = styled(SvgContainer)`
     width: 699px;
     height: 501px;
     left: -69px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 950px;
+    left: -375px;
+    top: 183px;
+    z-index: -1;
   }
 `;

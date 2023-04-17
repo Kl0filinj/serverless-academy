@@ -1,5 +1,9 @@
 import { theme } from "@/theme";
-import { SvgContainer } from "@/components/shared/styles/shearedStyles";
+import {
+  ContentContainer,
+  FlexContainer,
+  SvgContainer,
+} from "@/components/shared/styles/shearedStyles";
 import styled from "styled-components";
 import listsDot from "@/assets/shared/dots/lists_red_dot.svg";
 import smarterStarsIcon from "@/assets/Home/shared/smarter/smarterStars.svg";
@@ -11,8 +15,24 @@ interface ISmarterOptionButton {
 }
 
 export const SmarterSection = styled.section`
+  position: relative;
   padding-top: 140px;
   margin-bottom: 270px;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    padding-top: 230px;
+    margin-bottom: 200px;
+  }
+`;
+
+export const SmarterCaptionContainer = styled.div`
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    /* display: flex;
+    align-items: center; */
+    max-width: 500px;
+    margin: 0px;
+    text-align: start;
+  }
 `;
 
 export const SmarterOptionsGroup = styled.ul`
@@ -21,6 +41,10 @@ export const SmarterOptionsGroup = styled.ul`
   align-items: center;
   max-width: 387px;
   margin: 24px auto;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    margin: 24px 0;
+  }
 `;
 
 export const SmarterOptionButton = styled.button<ISmarterOptionButton>`
@@ -44,6 +68,13 @@ export const SmarterDescriptionList = styled.ul`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     margin: 0px 0px 0px 50px;
   }
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    margin: 0;
+  }
+`;
+
+export const SmarterDescriptionListContainer = styled(FlexContainer)`
+  justify-content: start;
 `;
 
 export const SmarterDescriptionListItem = styled.li`
@@ -93,6 +124,12 @@ export const SmarterRedRectangle = styled.div`
     width: 508px;
     height: 508px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 489.69px;
+    height: 489.69px;
+    border-radius: 72px;
+  }
 `;
 
 export const SmarterRedBgRectangle = styled.div`
@@ -112,6 +149,20 @@ export const SmarterRedBgRectangle = styled.div`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     width: 580px;
     height: 580px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    position: absolute;
+    border-radius: 72px;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+    height: 560px;
+    left: 62%;
+    top: 134px;
+    margin-top: 0px;
   }
 
   &::after {

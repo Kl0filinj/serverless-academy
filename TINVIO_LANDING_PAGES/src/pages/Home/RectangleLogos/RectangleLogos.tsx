@@ -13,10 +13,12 @@ import {
   ReactangleLogosItemCentralText,
   ReactangleLogosItemCentralSmileIcon,
   ReactangleLogosItemCentralContentContainer,
-  ReactangleLogosOneItem,
-  ReactangleLogosTwoItems,
   ReactangleLogosSecondTopTwoItems,
   ReactangleLogosSecondBottomTwoItems,
+  ReactangleLogosTopOneItem,
+  ReactangleLogosTopTwoItems,
+  ReactangleLogosBottomTwoItems,
+  ReactangleLogosBottomOneItem,
 } from "./RectangleLogos.styled";
 import {
   ContentContainer,
@@ -70,13 +72,13 @@ const RectangleLogos: React.FC = () => {
       <ContentContainer>
         <SectionTitle>We`ll put a smile on your supply chain </SectionTitle>
         <ReactangleLogosContainer>
-          <ReactangleLogosOneItem>
+          <ReactangleLogosTopOneItem>
             <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
             <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
             <ReactangleLogosItemIcon src={PetShopLogoIcon} alt="Logo Icon" />
-          </ReactangleLogosOneItem>
+          </ReactangleLogosTopOneItem>
           {/* First Row */}
-          <ReactangleLogosTwoItems styles={{ margin: "-46px 0px 0px" }}>
+          <ReactangleLogosTopTwoItems>
             <ReactangleLogosItem styles={firstTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
@@ -87,11 +89,9 @@ const RectangleLogos: React.FC = () => {
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={BBSLogoIcon} alt="Logo Icon" />
             </ReactangleLogosItem>
-          </ReactangleLogosTwoItems>
+          </ReactangleLogosTopTwoItems>
           {/* Second Row With 2 Items */}
-          <ReactangleLogosSecondTopTwoItems
-            styles={{ margin: "-39px 0px 0px" }}
-          >
+          <ReactangleLogosSecondTopTwoItems>
             <ReactangleLogosItem styles={secondTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
@@ -132,9 +132,7 @@ const RectangleLogos: React.FC = () => {
             </ReactangleLogosItemCentralBackground>
           </ReactangleLogosItemCentral>
           {/* Central Red Rectangle Ends */}
-          <ReactangleLogosSecondBottomTwoItems
-            styles={{ margin: "-96px 0px 0px" }}
-          >
+          <ReactangleLogosSecondBottomTwoItems>
             <ReactangleLogosItem styles={secondTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
@@ -153,7 +151,7 @@ const RectangleLogos: React.FC = () => {
             </ReactangleLogosItem>
           </ReactangleLogosSecondBottomTwoItems>
           {/* Third From End Row With 2 Items */}
-          <ReactangleLogosTwoItems styles={{ margin: "-39px 0px 0px" }}>
+          <ReactangleLogosBottomTwoItems>
             <ReactangleLogosItem styles={firstTwoItemsStyles}>
               <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
@@ -164,13 +162,13 @@ const RectangleLogos: React.FC = () => {
               <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
               <ReactangleLogosItemIcon src={GongchaLogoIcon} alt="Logo Icon" />
             </ReactangleLogosItem>
-          </ReactangleLogosTwoItems>
+          </ReactangleLogosBottomTwoItems>
           {/* Second From End Row With 2 Items */}
-          <ReactangleLogosOneItem styles={{ margin: "-46px 0px 0px" }}>
+          <ReactangleLogosBottomOneItem>
             <ReactangleLogosItemBackground></ReactangleLogosItemBackground>
             <ReactangleLogosItemForeground></ReactangleLogosItemForeground>
             <ReactangleLogosItemIcon src={KhopakaLogoIcon} alt="Logo Icon" />
-          </ReactangleLogosOneItem>
+          </ReactangleLogosBottomOneItem>
           {/* First From End Row */}
         </ReactangleLogosContainer>
       </ContentContainer>

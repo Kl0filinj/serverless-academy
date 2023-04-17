@@ -7,11 +7,14 @@ export const FooterS = styled.footer`
   padding: 40px 66px 8px;
 `;
 
-export const FooterContainer = styled.div`
-  display: flex;
+export const FooterContainer = styled(FlexContainer)`
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 `;
 
 export const FooterNavLinks = styled(NavLink)`
@@ -42,10 +45,20 @@ export const FooterNav = styled.ul`
     gap: 56px;
     margin-bottom: 32px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    margin: 0px 0px 0px 40px;
+  }
 `;
 
 export const FooterLogoNavContainer = styled(FlexContainer)`
   flex-direction: column;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const FooterSocContainer = styled(FlexContainer)`
@@ -69,6 +82,9 @@ export const FooterPrivacyInfoContainer = styled(FlexContainer)`
 
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     flex-direction: row;
+  }
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    justify-content: start;
   }
 `;
 

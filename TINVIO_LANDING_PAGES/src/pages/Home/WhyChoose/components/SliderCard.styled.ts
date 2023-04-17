@@ -5,14 +5,8 @@ import {
 import { theme } from "@/theme";
 import styled from "styled-components";
 
-interface SliderCardImageProps {
-  size: {
-    width: string;
-    height: string;
-  };
-}
-
 export const SliderCardContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -25,14 +19,11 @@ export const SliderCardContainer = styled.div`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     padding-top: 36px;
   }
-`;
 
-export const SliderCardImageContainer = styled.div`
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  padding-top: 25px;
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    max-width: 1032px;
+    min-height: 377px;
+  }
 `;
 
 export const SliderCardTextContainer = styled.div`
@@ -42,6 +33,13 @@ export const SliderCardTextContainer = styled.div`
   padding: 20px 16px 20px 24px;
   border-radius: 0px 20px 20px 0px;
   background-color: #f1f1f1;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-grow: unset;
+    max-width: 731px;
+    margin-left: 24px;
+    border-radius: 20px;
+  }
 `;
 
 export const SliderCardText = styled.p`
@@ -55,6 +53,12 @@ export const SliderCardText = styled.p`
     font-size: ${theme.fontSizes.tablet.md};
     line-height: 23px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    max-width: 620px;
+    font-size: ${theme.fontSizes.desktop.xs};
+    line-height: 24px;
+  }
 `;
 
 export const SliderCardLogoIconContainer = styled.div`
@@ -64,9 +68,27 @@ export const SliderCardLogoIconContainer = styled.div`
   justify-content: start;
   align-items: center;
   padding: 20px 16px 20px 24px;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    position: static;
+    flex-grow: unset;
+  }
 `;
 
-export const SliderCardImage = styled(FlexContainer)<SliderCardImageProps>`
-  width: ${(p) => p.size.width};
-  height: ${(p) => p.size.height};
+export const SliderCardImage = styled(FlexContainer)`
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    position: absolute;
+    right: 1px;
+    top: 1%;
+  }
+`;
+
+export const SliderQuotesContainer = styled(SvgContainer)`
+  top: 27%;
+  left: 90%;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    top: 30%;
+    left: 60%;
+  }
 `;

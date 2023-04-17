@@ -37,6 +37,8 @@ import firstRedArrowCardIcon from "@/assets/Home/shared/howItworks/first_step_re
 import secondRedArrowCardIcon from "@/assets/Home/shared/howItworks/second_step_red_arrow.svg";
 
 const HowItWorks: React.FC = () => {
+  const pageWidth = document.documentElement.scrollWidth;
+
   return (
     <HowItWorksSection>
       <ContentContainer>
@@ -80,7 +82,10 @@ const HowItWorks: React.FC = () => {
                 </HowItWorksChatsCardStars>
               </HowItWorksStaticCard>
 
-              <HowItWorksStaticCard ml="auto" mb="30">
+              <HowItWorksStaticCard
+                ml={pageWidth < 1024 ? "auto" : "300px"}
+                mb="30"
+              >
                 <div>
                   <HowItWorksCardTitle>Orders</HowItWorksCardTitle>
                   <HowItWorksCardSubtitle>

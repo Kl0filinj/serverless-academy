@@ -6,7 +6,7 @@ import {
   WhyCooseSkewedInnerContainer,
 } from "./WhyChoose.styled";
 import Slider from "react-slick";
-import SliderCard from "./SliderCard";
+import SliderCard from "./components/SliderCard";
 
 import inactivePaginationDotIcon from "@/assets/shared/dots/pagination_inactive_dot_icon.svg";
 import activePaginationDotIcon from "@/assets/shared/dots/pagination_active_dot_icon.svg";
@@ -55,6 +55,7 @@ const WhyChoose: React.FC = () => {
       </div>
     ),
   };
+
   return (
     <WhyChooseSection>
       <ContentContainer>

@@ -1,13 +1,12 @@
 import React from "react";
 import {
   SliderCardContainer,
-  SliderCardImageContainer,
   SliderCardTextContainer,
   SliderCardText,
   SliderCardLogoIconContainer,
   SliderCardImage,
+  SliderQuotesContainer,
 } from "./SliderCard.styled";
-import { SvgContainer } from "@/components/shared/styles/shearedStyles";
 
 import quotesIcon from "@/assets/Home/shared/whyChoose/quotes_icon.svg";
 
@@ -34,11 +33,6 @@ interface SliderCardProps {
   companyLogoImage: string;
 }
 
-const quotesIconStyles = {
-  top: "27%",
-  left: "90%",
-};
-
 const SliderCard: React.FC<SliderCardProps> = ({
   mainImage,
   mainImageSize,
@@ -47,7 +41,7 @@ const SliderCard: React.FC<SliderCardProps> = ({
 }) => {
   return (
     <SliderCardContainer>
-      <SliderCardImage size={mainImageSize}>
+      <SliderCardImage>
         <picture>
           <source
             srcSet={`${mainImage.mobile.x1} 1x, ${mainImage.mobile.x2} 2x`}
@@ -56,27 +50,30 @@ const SliderCard: React.FC<SliderCardProps> = ({
           />
           <source
             srcSet={`${mainImage.tablet.x1} 1x, ${mainImage.tablet.x2} 2x`}
-            media="(min-width: 768px)"
+            media="(min-width: 768px) and (max-width: 1024px)"
             type="image/png"
           />
-          {/* <source
-              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
-              media="(min-width: 1024px)"
-              type="image/png"
-            /> */}
-          <img src={mainImage.mobile.x1} alt="Image" />
+          <source
+            srcSet={`${mainImage.desktop.x1} 1x, ${mainImage.desktop.x2} 2x`}
+            media="(min-width: 1025px)"
+            type="image/png"
+          />
+          <img
+            src={mainImage.mobile.x1}
+            alt="Image"
+            width={mainImageSize.width}
+            height={mainImageSize.height}
+          />
         </picture>
       </SliderCardImage>
-      <div>
-        <SliderCardTextContainer>
-          <SliderCardText>{descriptionText}</SliderCardText>
-        </SliderCardTextContainer>
-      </div>
+      <SliderCardTextContainer>
+        <SliderCardText>{descriptionText}</SliderCardText>
+      </SliderCardTextContainer>
       <SliderCardLogoIconContainer>
         <img src={companyLogoImage} alt="Company Logo" />
-        <SvgContainer styles={quotesIconStyles}>
+        <SliderQuotesContainer>
           <img src={quotesIcon} alt="Quotes Icon" />
-        </SvgContainer>
+        </SliderQuotesContainer>
       </SliderCardLogoIconContainer>
     </SliderCardContainer>
   );

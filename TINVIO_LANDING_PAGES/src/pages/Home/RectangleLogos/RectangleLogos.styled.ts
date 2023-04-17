@@ -28,6 +28,10 @@ export const ReactangleLogosSection = styled.section`
       top: -67px;
       left: 531px;
     }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      left: 1133px;
+    }
   }
 `;
 
@@ -37,6 +41,15 @@ export const ReactangleLogosContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    justify-content: center;
+    padding-top: 25px;
+  }
 `;
 
 export const ReactangleLogosItem = styled.div<ReactangleLogosItemProps>`
@@ -52,23 +65,71 @@ export const ReactangleLogosItem = styled.div<ReactangleLogosItemProps>`
     width: 156px;
     height: 156px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 169px;
+    height: 169px;
+  }
 `;
 
-export const ReactangleLogosMultipleItems = styled.div<ReactangleLogosItemProps>`
+export const ReactangleLogosTopOneItem = styled(ReactangleLogosItem)`
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    /* margin: 0px -268px 0px 0px; */
+    margin: 0px -268px 0px 0px;
+  }
+`;
+
+export const ReactangleLogosBottomOneItem = styled(ReactangleLogosItem)`
+  margin: -46px 0px 0px;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    margin: 0px 0px 0px -268px;
+  }
+`;
+
+export const ReactangleLogosTopTwoItems = styled.div`
   display: flex;
-  ${(p) => p.styles}
+  margin: -46px 0px 0px;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: column-reverse;
+    margin: 0px;
+  }
+`;
+export const ReactangleLogosBottomTwoItems = styled.div`
+  display: flex;
+  margin: -39px 0px 0px;
+
+  @media screen and (min-width: ${theme.breakPoints.sm}) {
+    margin: -12px 0px 0px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: column-reverse;
+  }
 `;
 
-export const ReactangleLogosOneItem = styled(ReactangleLogosItem)``;
-export const ReactangleLogosTwoItems = styled(ReactangleLogosMultipleItems)``;
-export const ReactangleLogosSecondTopTwoItems = styled(
-  ReactangleLogosMultipleItems
-)``;
-export const ReactangleLogosSecondBottomTwoItems = styled(
-  ReactangleLogosSecondTopTwoItems
-)`
+export const ReactangleLogosSecondTopTwoItems = styled.div`
+  display: flex;
+  margin: -39px 0px 0px;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: column-reverse;
+    margin: 0px -84px 0px 0px;
+  }
+`;
+
+export const ReactangleLogosSecondBottomTwoItems = styled.div`
+  display: flex;
+  margin: -96px 0px 0px;
+
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     margin: -214px 0px 0px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: column-reverse;
+    margin: 0px 0px 0px -84px;
   }
 `;
 
@@ -94,6 +155,11 @@ export const ReactangleLogosItemBackground = styled.div`
     height: 108px;
     border-radius: 14.8359px;
   }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 121px;
+    height: 118px;
+  }
 `;
 
 export const ReactangleLogosItemForeground = styled.div`
@@ -114,6 +180,11 @@ export const ReactangleLogosItemForeground = styled.div`
     width: 83px;
     height: 83px;
     border-radius: 11.9999px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 90px;
+    height: 90px;
   }
 `;
 
@@ -142,6 +213,12 @@ export const ReactangleLogosItemCentral = styled.div`
     width: 491px;
     height: 491px;
     margin: -226px 0px 0px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 462px;
+    height: 462px;
+    margin: 0px 20px;
   }
 `;
 
@@ -172,6 +249,12 @@ export const ReactangleLogosItemCentralBackground = styled.div`
     border-radius: 25.3502px;
   }
 
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 292px;
+    height: 292px;
+    border-radius: 24.0543px;
+  }
+
   &::after,
   &::before {
     content: "";
@@ -189,6 +272,10 @@ export const ReactangleLogosItemCentralBackground = styled.div`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       border-width: 70px;
     }
+
+    /* @media screen and (min-width: ${theme.breakPoints.md}) {
+      border-width: 70px;
+    } */
   }
 `;
 
@@ -212,6 +299,12 @@ export const ReactangleLogosItemCentralForeground = styled.div`
     width: 259px;
     height: 259px;
     border-radius: 25.3502px;
+  }
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
+    width: 246px;
+    height: 246px;
+    border-radius: 24.0543px;
   }
 `;
 

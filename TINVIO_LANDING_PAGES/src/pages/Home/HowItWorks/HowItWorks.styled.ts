@@ -10,7 +10,7 @@ import { theme } from "@/theme";
 import styled from "styled-components";
 
 interface HowItWorksStaticCardProps {
-  ml?: "auto" | 0 | "0";
+  ml?: string;
   mb?: string;
 }
 
@@ -38,7 +38,7 @@ export const HowItWorksContentContainer = styled(FlexContainer)`
 
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
   }
 `;
@@ -96,6 +96,11 @@ export const HowItWorksSkewdInnerContainer = styled(SkewedInnerContainer)`
       background-image: url(${bigDotsGroupIcon});
       top: 237px;
     }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      top: 437px;
+      left: 800px;
+    }
   }
 
   &::before {
@@ -114,6 +119,11 @@ export const HowItWorksSkewdInnerContainer = styled(SkewedInnerContainer)`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       left: 440px;
       top: 493px;
+    }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      top: 537px;
+      left: 10px;
     }
   }
 `;
@@ -180,6 +190,11 @@ export const HowItWorksChatsCardIcon = styled(SvgContainer)`
     top: -31px;
   }
 
+  /* @media screen and (min-width: ${theme.breakPoints.sm}) {
+    left: 212px;
+    top: -31px;
+  } */
+
   & > img {
     width: 68px;
     height: 68px;
@@ -187,6 +202,11 @@ export const HowItWorksChatsCardIcon = styled(SvgContainer)`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       width: 81px;
       height: 81px;
+    }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      width: 92px;
+      height: 92px;
     }
   }
 `;
@@ -254,6 +274,11 @@ export const HowItWorksOrdersCardIcon = styled(SvgContainer)`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       width: 81px;
       height: 81px;
+    }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      width: 92px;
+      height: 92px;
     }
   }
 `;
@@ -343,6 +368,11 @@ export const HowItWorksPaymentsCardIcon = styled(SvgContainer)`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       width: 81px;
       height: 81px;
+    }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      width: 92px;
+      height: 92px;
     }
   }
 `;

@@ -72,12 +72,12 @@ const Hero: React.FC = () => {
             />
             <source
               srcSet={`${tablet_phoneHeroImage1x} 1x, ${tablet_phoneHeroImage2x} 2x`}
-              media="(min-width: 768px)"
+              media="(min-width: 768px) and (max-width: 1024px)"
               type="image/png"
             />
             <source
               srcSet={`${desktop_phoneHeroImage1x} 1x, ${desktop_phoneHeroImage2x} 2x`}
-              media="(min-width: 1024px)"
+              media="(min-width: 1025px)"
               type="image/png"
             />
             <img src={mobile_phoneHeroImage1x} alt="Phone Image" />
@@ -92,12 +92,12 @@ const Hero: React.FC = () => {
             />
             <source
               srcSet={`${tablet_pcHeroImage1x} 1x, ${tablet_pcHeroImage2x} 2x`}
-              media="(min-width: 768px)"
+              media="(min-width: 768px) and (max-width: 1024px)"
               type="image/png"
             />
             <source
               srcSet={`${desktop_pcHeroImage1x} 1x, ${desktop_pcHeroImage2x} 2x`}
-              media="(min-width: 1024px)"
+              media="(min-width: 1025px)"
               type="image/png"
             />
             <img src={mobile_pcHeroImage1x} alt="PC Image" width="100%" />

@@ -21,6 +21,8 @@ import mobile_dotsMapImage1x from "@/assets/Home/mobile/feedbackForm/dots_map_1x
 import mobile_dotsMapImage2x from "@/assets/Home/mobile/feedbackForm/dots_map_2x.png";
 import tablet_dotsMapImage1x from "@/assets/Home/tablet/feedbackForm/dots_map_1x.png";
 import tablet_dotsMapImage2x from "@/assets/Home/tablet/feedbackForm/dots_map_2x.png";
+import desktop_dotsMapImage1x from "@/assets/Home/desktop/feedbackForm/dots_map_1x.png";
+import desktop_dotsMapImage2x from "@/assets/Home/desktop/feedbackForm/dots_map_2x.png";
 
 const FeedbackForm: React.FC = () => {
   return (
@@ -73,14 +75,14 @@ const FeedbackForm: React.FC = () => {
           />
           <source
             srcSet={`${tablet_dotsMapImage1x} 1x, ${tablet_dotsMapImage2x} 2x`}
-            media="(min-width: 768px)"
+            media="(min-width: 768px) and (max-width: 1024px)"
             type="image/png"
           />
-          {/* <source
-              srcSet="./images/desktop/team_desktop/ihor.jpg 1x, ./images/desktop/team_desktop/ihor_2x.jpg 2x"
-              media="(min-width: 1024px)"
-              type="image/png"
-            /> */}
+          <source
+            srcSet={`${desktop_dotsMapImage1x} 1x, ${desktop_dotsMapImage2x} 2x`}
+            media="(min-width: 1025px)"
+            type="image/png"
+          />
           <img src={mobile_dotsMapImage1x} alt="Dots Map Image" />
         </picture>
       </FeedbakcDotsMapImageContainer>

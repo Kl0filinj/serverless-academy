@@ -7,6 +7,7 @@ import { theme } from "@/theme";
 import styled from "styled-components";
 import starsGroupIcon from "@/assets/Home/shared/whyChoose/stars_group.svg";
 import bigDotsGroupIcon from "@/assets/shared/dots/big_25_dots_group.svg";
+import medDotsGroupIcon from "@/assets/shared/dots/big_20_dots_group.svg";
 
 export const WhyChooseSection = styled(SkewedSection)`
   background-color: rgb(54, 54, 54);
@@ -31,6 +32,10 @@ export const WhyChooseSection = styled(SkewedSection)`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       left: 409px;
     }
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      left: 730px;
+    }
   }
 `;
 
@@ -40,6 +45,19 @@ export const WhyChooseSectionTitle = styled(SectionTitle)`
 `;
 
 export const WhyCooseSkewedInnerContainer = styled(SkewedInnerContainer)`
+  &::after {
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      content: "";
+      position: absolute;
+      background: url(${medDotsGroupIcon});
+      width: 279px;
+      height: 210px;
+      top: -20px;
+      right: -150px;
+      z-index: -2;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -48,5 +66,9 @@ export const WhyCooseSkewedInnerContainer = styled(SkewedInnerContainer)`
     height: 311.21px;
     top: 694px;
     left: -73px;
+
+    @media screen and (min-width: ${theme.breakPoints.md}) {
+      top: 490px;
+    }
   }
 `;
