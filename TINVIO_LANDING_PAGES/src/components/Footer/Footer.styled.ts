@@ -62,7 +62,9 @@ export const FooterLogoNavContainer = styled(FlexContainer)`
 `;
 
 export const FooterSocContainer = styled(FlexContainer)`
-  @media screen and (min-width: ${theme.breakPoints.sm}) {
+  flex-direction: column;
+
+  @media screen and (min-width: ${theme.breakPoints.md}) {
     flex-direction: row;
     align-items: baseline;
     gap: 32px;

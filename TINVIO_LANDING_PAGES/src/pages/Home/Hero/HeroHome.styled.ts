@@ -46,6 +46,7 @@ export const HeroRedRectangle = styled.div`
   @media screen and (min-width: ${theme.breakPoints.sm}) {
     width: 921px;
     height: 921px;
+    border-radius: 88px;
   }
 
   @media screen and (min-width: ${theme.breakPoints.md}) {
@@ -136,6 +137,7 @@ export const HeroRedBgRectangle = styled.div`
     height: 999px;
     left: -621px;
     top: 374px;
+    border-radius: 88px;
   }
 
   @media screen and (min-width: ${theme.breakPoints.md}) {
@@ -172,7 +174,7 @@ export const PhoneHeroImageContainer = styled(SvgContainer)`
     top: 590px;
   }
 
-  @media screen and (min-width: ${theme.breakPoints.sm}) {
+  @media screen and (min-width: ${theme.breakPoints.md}) {
     height: 372px;
     width: 190px;
     right: 381px;
@@ -193,7 +195,7 @@ export const PcHeroImageContainer = styled(SvgContainer)`
     top: 336px;
   }
 
-  @media screen and (min-width: ${theme.breakPoints.sm}) {
+  @media screen and (min-width: ${theme.breakPoints.md}) {
     height: 517px;
     width: 772px;
     right: -392px;

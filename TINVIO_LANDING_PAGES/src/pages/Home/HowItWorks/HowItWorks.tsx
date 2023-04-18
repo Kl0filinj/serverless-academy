@@ -60,7 +60,7 @@ const HowItWorks: React.FC = () => {
             </div>
 
             <HowItWorksSeparator>
-              <HowItWorksStaticCard mb="60">
+              <HowItWorksStaticCard mb="60px">
                 <div>
                   <HowItWorksCardTitle>Chats</HowItWorksCardTitle>
                   <HowItWorksCardSubtitle>
@@ -82,10 +82,7 @@ const HowItWorks: React.FC = () => {
                 </HowItWorksChatsCardStars>
               </HowItWorksStaticCard>
 
-              <HowItWorksStaticCard
-                ml={pageWidth < 1024 ? "auto" : "300px"}
-                mb="30"
-              >
+              <HowItWorksStaticCard ml="300px" mb="30px">
                 <div>
                   <HowItWorksCardTitle>Orders</HowItWorksCardTitle>
                   <HowItWorksCardSubtitle>

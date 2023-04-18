@@ -19,7 +19,7 @@ export const HowItWorksSection = styled(SkewedSection)`
     margin: 639px 0px 0px;
   }
 
-  @media screen and (min-width: ${theme.breakPoints.sm}) {
+  @media screen and (min-width: ${theme.breakPoints.md}) {
     margin: 248px 0px 0px;
   }
 `;
@@ -36,7 +36,7 @@ export const HowItWorksInnerContainer = styled.div`
 export const HowItWorksContentContainer = styled(FlexContainer)`
   flex-direction: column;
 
-  @media screen and (min-width: ${theme.breakPoints.sm}) {
+  @media screen and (min-width: ${theme.breakPoints.md}) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +51,7 @@ export const HowItWorksStaticCard = styled.div<HowItWorksStaticCardProps>`
   width: 166px;
   height: 67px;
   margin-left: ${(p) => p.ml};
-  margin-bottom: ${(p) => p.mb}px;
+  margin-bottom: ${(p) => p.mb};
   background: ${theme.colors.white};
   border-radius: 11.6px;
   box-shadow: rgba(33, 33, 33, 0.1) 4px 7px 20px 0px;

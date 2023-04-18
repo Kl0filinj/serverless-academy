@@ -43,10 +43,11 @@ export const ReactangleLogosContainer = styled.div`
   align-items: center;
 
   @media screen and (min-width: ${theme.breakPoints.sm}) {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   @media screen and (min-width: ${theme.breakPoints.md}) {
+    flex-direction: row;
     justify-content: center;
     padding-top: 25px;
   }
@@ -272,10 +273,6 @@ export const ReactangleLogosItemCentralBackground = styled.div`
     @media screen and (min-width: ${theme.breakPoints.sm}) {
       border-width: 70px;
     }
-
-    /* @media screen and (min-width: ${theme.breakPoints.md}) {
-      border-width: 70px;
-    } */
   }
 `;
 
